@@ -6,6 +6,6 @@ int main(void)
     char c2 = 'I';
     char c3 = '!';
 
-    printf("%C%C%C\n", c1, c2, c3)
+    printf("%C%C%C\n", c1, c2, c3);
 }
 
