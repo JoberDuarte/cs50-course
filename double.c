@@ -3,12 +3,13 @@
 
 int main(void)
 {
-    int sequence [5];
+    int size = 8;
+    int sequence [size];
 
     sequence[0] = 1;
     printf("%i\n", sequence[0]);
 
-    for (int i = 1; i < 5; i++)
+    for (int i = 1; i < size; i++)
     {
         sequence[i] = sequence[i-1] * 2;
         printf("%i\n", sequence[i]);
