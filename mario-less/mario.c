@@ -23,6 +23,7 @@ int main(void)
 
 void print_row(int ponto, int tamanho)
 {
+    for (int i = 0; i)
     for(int i = 0; i < tamanho; i++)
     {
         printf("#");
