@@ -23,7 +23,7 @@ int main(void)
 
 void print_row(int ponto, int tamanho)
 {
-   for (int i = 0; i < ponto ; i++)
+   for (int i = ponto; i > 0 ; i--)
    {
         printf(".");
     }
