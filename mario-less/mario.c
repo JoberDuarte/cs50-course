@@ -15,6 +15,7 @@ int main(void)
     for (int i = 0; i < altura; i++)
     {
         //Mostre a linha de #
+        print_row(i + 1)
 
     }
 }
@@ -22,5 +23,5 @@ int main(void)
 void print_row(int tamanho)
 {
     for(int i = 0; i < tamanho; i++)
-    
+
 }
