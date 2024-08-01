@@ -21,11 +21,11 @@ int main(void)
     }
 }
 
-void print_row(int ponto, int tamanho)
-{
-    for (int i = 0; i < ponto ; i++)
-    {
-        printf(".");
+// void print_row(int ponto, int tamanho)
+// {
+   // for (int i = 0; i < ponto ; i++)
+   // {
+       // printf(".");
     }
     //for(int i = 0; i < tamanho; i++)
    // {
