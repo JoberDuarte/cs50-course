@@ -1,13 +1,14 @@
 #include <cs50.h>
 #include <stdio.h>
 
+void print_row(int tamanho);
 int main(void)
 {
     // Pergunte ao usuario o tamanho da piramide
     int altura;
     do
     {
-         int altura = get_int(" Height: ");
+        altura = get_int(" Height: ");
     }
     while(n < 1);
 
@@ -23,5 +24,9 @@ int main(void)
 void print_row(int tamanho)
 {
     for(int i = 0; i < tamanho; i++)
+    {
+        printf("#");
+    }
+    printf("\n");
 
 }
