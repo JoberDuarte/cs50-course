@@ -10,13 +10,13 @@ int main(void)
     {
         altura = get_int(" Height: ");
     }
-    while(n < 1);
+    while(altura < 1);
 
     //Mostre o tamanho da piramide
     for (int i = 0; i < altura; i++)
     {
         //Mostre a linha de #
-        print_row(i + 1)
+        print_row(i + 1);
 
     }
 }
