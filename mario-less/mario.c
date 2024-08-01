@@ -17,13 +17,13 @@ int main(void)
     for (int i = 0; i < altura; i++)
     {
         //Mostre a linha de #
-        print_row( i + 1 , i + 1);
+        print_row();
     }
 }
 
 void print_row(int ponto, int tamanho)
 {
-    for (int i = 0; i < tamanho ; i--)
+    for (int i = 0; i < ponto ; i++)
     {
         printf(".");
     }
