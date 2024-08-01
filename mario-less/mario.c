@@ -3,7 +3,19 @@
 
 int main(void)
 {
-    int height = get_int(" Height: ");
-    for 
+    // Pergunte ao usuario o tamanho da piramide
+    int height;
+    do
+    {
+         int height = get_int(" Height: ");
+    }
+    while(n < 1);
+
+    //Mostre o tamanho da piramide
+    for (int i = 0; i < height; i++)
+    {
+        //Mostre a linha de #
+        
+    }
 }
 
