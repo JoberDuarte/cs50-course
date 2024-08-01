@@ -17,20 +17,20 @@ int main(void)
     for (int i = 0; i < altura; i++)
     {
         //Mostre a linha de #
-        print_row( i + 1, i+1);
+        print_row(i+1, i+1);
     }
 }
 
 void print_row(int ponto, int tamanho)
 {
-   for (int i = ponto; i > 0 ; i--)
+   for (int i = 10; i > 0 ; i--)
    {
         printf(".");
-    }
-        for(int i = 0; i < tamanho; i++)
-    {
-        printf("#");
-    }
+   }
+      //  for(int i = 0; i < tamanho; i++)
+  //  {
+       // printf("#");
+ //   }
     printf("\n");
 
 }
