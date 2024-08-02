@@ -8,7 +8,7 @@ int main(void)
 
     for (int i = 0; i < height; i++)
     {
-        print_row(i +1 );
+        print_row(i + 1 );
 }
     }
 
@@ -16,7 +16,7 @@ int main(void)
 
 void print_row(int length)
 {
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i > length; i--)
     {
         printf("#");
     }
