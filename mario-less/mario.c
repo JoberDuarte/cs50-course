@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void print_row(int ponto, int tamanho);
+void print_row(int ponto, int altura);
 
 
 int main(void)
@@ -22,10 +22,10 @@ int main(void)
     }
 }
 
-void print_row(int ponto, int tamanho)
+void print_row(int ponto, int altura)
 
 {
-   for (int i = 1; i < ponto - 1 ; i++)
+   for (int i = 1; i < ponto - altura ; i++)
    {
         printf(".");
    }
