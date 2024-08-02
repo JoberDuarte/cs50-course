@@ -27,7 +27,7 @@ void print_row(int ponto, int altura)
 {
    for (int i = 1; i < altura - ponto -1 ; i++)
    {
-        printf(" ");
+        printf(".");
    }
    for(int i = 0; i < ponto; i++)
    {
