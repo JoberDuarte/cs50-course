@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void print_row(int ponto, int tamanho)
+void print_row(int ponto, int tamanho);
 
 
 int main(void)
@@ -15,17 +15,17 @@ int main(void)
     while(altura < 1);
 
     //Mostre o tamanho da piramide
-    for (int i = 0; i < altura; i--)
+    for (int i = 0; i < altura; i++)
     {
         //Mostre a linha de #
-        print_row(i);
+        print_row(i+1,i+1);
     }
 }
 
 void print_row(int ponto, int tamanho)
 
 {
-   for (int i = ponto; i > 0 ; i--)
+   for (int i = 1; i < ponto - 1 ; i++)
    {
         printf(".");
    }
