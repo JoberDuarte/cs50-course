@@ -25,7 +25,7 @@ int main(void)
 void print_row(int ponto, int tamanho)
 
 {
-   for (int i = 0; i < tamanho - ponto + 1 ; i++)
+   for (int i = 0; i < tamanho - ponto ; i++)
    {
         printf(" ");
    }
