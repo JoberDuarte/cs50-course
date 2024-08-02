@@ -18,14 +18,14 @@ int main(void)
     for (int i = 0; i < altura; i++)
     {
         //Mostre a linha de #
-        print_row(i, i+1);
+        print_row(i, altura);
     }
 }
 
 void print_row(int ponto, int tamanho)
 
 {
-   for (int i = 1; i < ponto - tamanho; i--)
+   for (int i = 1; i < ponto - tamanho -1 ; i++)
    {
         printf(".");
    }
