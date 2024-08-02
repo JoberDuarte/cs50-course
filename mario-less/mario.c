@@ -1,7 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void print_row(int ponto, int tamanho);
+void print_row(int ponto); //int tamanho)
+
 
 int main(void)
 {
@@ -17,14 +18,14 @@ int main(void)
     for (int i = 0; i < altura; i++)
     {
         //Mostre a linha de #
-        print_row(i, i+1);
+        print_row(i);
     }
 }
 
 void print_row(int ponto) //int tamanho)
 
 {
-   for (int i = ponto; i > 0 ; i--)
+   for (int i = 10; i > 0 ; i--)
    {
         printf(".");
    }
@@ -32,6 +33,6 @@ void print_row(int ponto) //int tamanho)
 //   {
 //        printf("#");
 //   }
-//   printf("\n");
+   printf("\n");
 
 }
