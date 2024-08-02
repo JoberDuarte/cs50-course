@@ -18,7 +18,7 @@ int main(void)
     for (int i = 0; i < altura; i++)
     {
         //Mostre a linha de #
-        print_row(i,altura);
+        print_row(i, altura + 2);
     }
 }
 
