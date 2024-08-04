@@ -41,6 +41,14 @@ int calculate_quarters(int cents)
     }
     return nickels;
 
-    int 
+    int pennies;
+    while (cents >= 1)
+    {
+        pennies++;
+        cents = cents - 1;
+    }
+    return pennies;
+
+    
 
 }
