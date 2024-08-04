@@ -3,10 +3,10 @@
 
 int main(void)
 {
-    int cash;
+    int cents;
     do
     {
-        cash = get_int("Charge owed: ");
+        cents = get_int("Charge owed: ");
     }
     while (cash < 0);
 
