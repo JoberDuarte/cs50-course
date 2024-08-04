@@ -9,7 +9,9 @@ int main(void)
         cents = get_int("Charge owed: ");
     }
     while (cash < 0);
-    
+
+    int quarters = calculate_quarters(cents);
+    cents = cents - (quarters * 25);
 
 }
 
