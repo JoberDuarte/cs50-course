@@ -3,5 +3,11 @@
 
 int main(void)
 {
-    int cash = get_int("Charge owed: ");
+    int cash;
+    do
+    {
+        cash = get_int("Charge owed: ");
+    }
+    while (cash < 0)
+
 }
