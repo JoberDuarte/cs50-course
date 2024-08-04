@@ -1,6 +1,9 @@
 #include <cs50.h>
 #include <stdio.h>
 
+
+int calculate_quarters(int cents);
+
 int main(void)
 {
     int cents;
@@ -25,7 +28,7 @@ int calculate_quarters(int cents)
     }
     return quarters;
 
-    int dimes = 0
+    int dimes = 0;
     while (cents >= 10)
     {
         dimes++;
@@ -49,7 +52,8 @@ int calculate_quarters(int cents)
     }
     return pennies;
 
-    sum = quarters + dimes + nickels + pennies
-    prinf("%i", sum)
+    int sum = quarters + dimes + nickels + pennies;
+
+    printf("%i", sum);
 
 }
