@@ -8,7 +8,7 @@ int main(void)
     {
         cents = get_int("Charge owed: ");
     }
-    while (cash < 0);
+    while (cents < 0);
 
     int quarters = calculate_quarters(cents);
     cents = cents - (quarters * 25);
@@ -49,6 +49,7 @@ int calculate_quarters(int cents)
     }
     return pennies;
 
-    sum = quarters + dimes + 
+    sum = quarters + dimes + nickels + pennies
+    prinf("%i", sum)
 
 }
