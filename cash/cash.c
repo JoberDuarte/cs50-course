@@ -15,7 +15,7 @@ int main(void)
 
     int quarters = calculate_quarters(cents);
     cents = cents - (quarters *25);
-    printf()
+    printf("%i", quarters);
 
 
 
@@ -63,8 +63,5 @@ int calculate_pennies(int cents)
     return pennies;
 }
 
-    int sum = quarters + dimes + nickels + pennies;
-
-    printf("%i", sum);
 
 
