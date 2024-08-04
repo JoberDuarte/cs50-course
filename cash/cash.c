@@ -14,6 +14,7 @@ int main(void)
     while (cents < 0);
 
     calculate_quarters(cents);
+    
 
 
 }
@@ -54,6 +55,6 @@ int calculate_quarters(int cents)
 
     int sum = quarters + dimes + nickels + pennies;
 
-    
+    printf("%i", sum);
 
 }
