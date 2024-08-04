@@ -49,6 +49,6 @@ int calculate_quarters(int cents)
     }
     return pennies;
 
-    
+    sum = quarters + dimes + 
 
 }
