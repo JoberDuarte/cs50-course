@@ -8,6 +8,6 @@ int main(void)
     {
         cash = get_int("Charge owed: ");
     }
-    while (cash < 0)
+    while (cash < 0);
 
 }
