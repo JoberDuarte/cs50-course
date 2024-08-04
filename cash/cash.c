@@ -13,8 +13,8 @@ int main(void)
     }
     while (cents < 0);
 
-    calculate_quarters(cents);
-    
+    int quarters = calculate_quarters(cents);
+
 
 
 }
@@ -28,7 +28,10 @@ int calculate_quarters(int cents)
         cents = cents - 25;
     }
     return quarters;
+}
 
+int calculate_dimes(int cents)
+{
     int dimes = 0;
     while (cents >= 10)
     {
@@ -36,7 +39,9 @@ int calculate_quarters(int cents)
         cents = cents - 15;
     }
     return dimes;
-
+}
+int calculate_nickles(int cents)
+{
     int nickels;
     while (cents >= 5)
     {
@@ -44,7 +49,9 @@ int calculate_quarters(int cents)
         cents = cents - 5;
     }
     return nickels;
-
+}
+int calculate_pennies(int cents)
+{
     int pennies;
     while (cents >= 1)
     {
@@ -52,9 +59,10 @@ int calculate_quarters(int cents)
         cents = cents - 1;
     }
     return pennies;
+}
 
     int sum = quarters + dimes + nickels + pennies;
 
     printf("%i", sum);
 
-}
+
