@@ -18,7 +18,7 @@ int main(void)
 
     int quarters = calculate_quarters(cents);
     cents = cents - (quarters *25);
-    printf("%i", quarters);
+    printf("%i\n", quarters);
 
 
 
