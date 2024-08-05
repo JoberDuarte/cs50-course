@@ -52,7 +52,7 @@ int calculate_dimes(int cents)
     while (cents >= 10)
     {
         dimes++;
-        cents = cents - 15;
+        cents = cents - 10;
     }
     return dimes;
 }
