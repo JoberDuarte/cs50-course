@@ -22,13 +22,17 @@ int main(void)
     int dimes = calculate_dimes(cents);
     cents = cents - (dimes *15);
 
-    int sum = quarters + dimes;
+    int nickels = calculate_nickels(cents);
+    cents = cents - (nickels *5);
+
+    int pennies  = calculate_pennies(cents);
+    cents = cents - (pennies *1);
+
+    int sum = quarters + dimes + nickels + pennies;
     printf("%i\n", sum);
 
-
-
-
 }
+
 
 int calculate_quarters(int cents)
 {
