@@ -30,6 +30,7 @@ int main(void)
 
     int sum = quarters + dimes + nickels + pennies;
     printf("%i\n", sum);
+    printf("25==%i    10==%i    5==%i    1==%i", quarters, dimes, nickels, pennies);
 
 }
 
