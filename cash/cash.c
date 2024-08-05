@@ -20,7 +20,7 @@ int main(void)
     cents = cents - (quarters *25);
 
     int dimes = calculate_dimes(cents);
-    cents = cents - (dimes *15);
+    cents = cents - (dimes *10);
 
     int nickels = calculate_nickels(cents);
     cents = cents - (nickels *5);
@@ -30,7 +30,7 @@ int main(void)
 
     int sum = quarters + dimes + nickels + pennies;
     printf("%i\n", sum);
-    printf("25==%i    10==%i    5==%i    1==%i", quarters, dimes, nickels, pennies);
+    printf("25== %i    10== %i    5== %i    1== %i\n", quarters, dimes, nickels, pennies);
 
 }
 
