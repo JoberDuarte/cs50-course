@@ -18,7 +18,13 @@ int main(void)
 
     int quarters = calculate_quarters(cents);
     cents = cents - (quarters *25);
-    printf("%i\n", quarters);
+
+    int dimes = calculate_dimes(cents);
+    cents = cents - (dimes *15);
+
+    int sum = quarters + dimes;
+    printf("%i\n", sum);
+
 
 
 
