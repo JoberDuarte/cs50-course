@@ -1,3 +1,9 @@
 #include <ctype.h>
 #include <cs50.h>
-#include <>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    
+}
