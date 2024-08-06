@@ -7,4 +7,6 @@ int main(void)
 {
    char player1 = get_string("Player 1: ");
    char player2 = get_string("Player 2: ");
+
+   
 }
