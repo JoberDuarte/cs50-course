@@ -19,5 +19,13 @@ int main(void)
 }
 int compute_score(string word)
 {
-
+    int score = 0
+    len = strlen(word);
+    for(i = 0, i < len, i++)
+    {
+        if (isupper(word[i]))
+        {
+            score += POINTS[word[i]] - 'A'
+        }
+    }
 }
