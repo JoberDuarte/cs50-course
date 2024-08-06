@@ -12,8 +12,21 @@ int main(void)
    string word1 = get_string("Player 1: ");
    string word2 = get_string("Player 2: ");
 
-   int score1 = compute_score(player1);
-   int socre2 = compute_score(player2);
+   int score1 = compute_score(word1);
+   int soc0e2 = compute_score(word2);
+
+   if (score1 > score2)
+   {
+    prinft("Player 1 wins!\n");
+   }
+   else if (score2 > score1)
+   {
+    printf("Player 2 wins!\n");
+   }
+   else
+   {
+    printf("Tie!\n")
+   }
 
 
 }
@@ -25,7 +38,12 @@ int compute_score(string word)
     {
         if (isupper(word[i]))
         {
-            score += POINTS[word[i]] - 'A'
+            score += POINTS[word[i] - 'A']
         }
+        else if (islower(word));
+        {
+            score += POINTS[word[i] - 'a']
+        }
+        return score;
     }
 }
