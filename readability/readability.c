@@ -7,5 +7,12 @@
 int main(void)
 {
     string text = get_string("TEXT: ");
-    
+
+}
+
+int count_letters(string text)
+{
+   int letter = 0
+
+   for(i = 0)
 }
