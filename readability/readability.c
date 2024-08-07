@@ -19,7 +19,7 @@ int main(void)
     float l =  (letter/words) *100;
     float s = (sentences/words) *100;
 
-    float index = 0.0588 * l - 0.296 * s -15.8;
+    float index = (0.0588 * l) - (0.296 * s) -15.8;
 
 
 
