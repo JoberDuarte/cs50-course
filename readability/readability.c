@@ -32,7 +32,7 @@ int count_letters(string text)
    {
     if(isalpha(text[i]))
     {
-        letter += 1;
+        letter++;
     }
    }
    return letter;
@@ -47,7 +47,7 @@ int count_words(string text)
     {
         if(isspace(text[i]))
         {
-            words += 1;
+            words++;
         }
     }
     return words;
