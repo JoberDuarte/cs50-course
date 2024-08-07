@@ -22,7 +22,7 @@ int count_letters(string text)
    int letter = 0;
    int len = strlen(text);
 
-   for(i = 0; i < len; i++)
+   for(int i = 0; i < len; i++)
    {
     if(isalpha(text))
     {
