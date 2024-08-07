@@ -49,3 +49,14 @@ int count_words(string text)
     }
     return words;
 }
+
+int count_sentences(string text)
+{
+    int senteses = 0;
+    int len = strlen(text);
+
+    for(int i = 0; i < len; i++)
+    {
+        
+    }
+}
