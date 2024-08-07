@@ -6,6 +6,7 @@
 
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -13,9 +14,11 @@ int main(void)
 
     int letter = count_letters(text);
     int words = count_words(text);
+    int sentences = count_sentences(text);
 
     printf("Letters : %i\n", letter);
     printf("Words : %i\n", words);
+    printf("Sentences : %i\n", sentences);
 
 
 }
@@ -52,11 +55,15 @@ int count_words(string text)
 
 int count_sentences(string text)
 {
-    int senteses = 0;
+    int sentences = 0;
     int len = strlen(text);
 
     for(int i = 0; i < len; i++)
     {
-        
+        if(ispunct(text[i]))
+        {
+            sentences += 1;
+        }
     }
+    return sentences;
 }
