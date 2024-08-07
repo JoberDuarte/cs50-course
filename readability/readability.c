@@ -30,6 +30,10 @@ int count_letters(string text)
     }
    }
    return letter;
+}
 
 int count_words(string text)
+{
+    int words = 0;
+    
 }
