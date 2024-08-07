@@ -15,5 +15,8 @@ int count_letters(string text)
    int letter = 0
    int len = strlen(text)
 
-   for(i = 0)
+   for(i = 0; i < len; i++)
+   {
+    if
+   }
 }
