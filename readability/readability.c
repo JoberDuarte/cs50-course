@@ -22,6 +22,19 @@ int main(void)
     float result = (0.0588 * l) - (0.296 * s) -15.8;
     float rounded_result = round(result);
 
+    if (rounded_result < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else if (rounded_result >= 16)
+    {
+        printf("Grade 16+");
+    }
+    else
+    {
+        printf("Grade %.0f\n", rounded_result);
+    }
+
 
 
     printf("Letters : %i\n", letter);
@@ -30,9 +43,6 @@ int main(void)
 
     printf("L : %i\n", l);
     printf("S : %i\n", s);
-
-    printf("Index : %.0f\n", rounded_result);
-
 
 }
 
