@@ -28,7 +28,7 @@ int main(void)
     }
     else if (rounded_result >= 16)
     {
-        printf("Grade 16+");
+        printf("Grade 16+\n");
     }
     else
     {
