@@ -31,7 +31,7 @@ int main(void)
     printf("L : %i\n", l);
     printf("S : %i\n", s);
 
-    printf("Index : %.1f\n", rounded_result);
+    printf("Index : %.0f\n", rounded_result);
 
 
 }
