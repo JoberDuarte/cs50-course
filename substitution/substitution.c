@@ -5,5 +5,5 @@
 
 int main(int argc, string argv[])
 {
-    
+    int len = strlen(argv[1]:><MN}
 }
