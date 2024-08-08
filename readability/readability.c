@@ -1,8 +1,8 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
-#include <string.h>
 #include <math.h>
+#include <stdio.h>
+#include <string.h>
 
 int count_letters(string text);
 int count_words(string text);
@@ -16,10 +16,10 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
 
-    float l = (float) letter / words *100;
-    float s = (float) sentences / words *100;
+    float l = (float) letter / words * 100;
+    float s = (float) sentences / words * 100;
 
-    float result = (0.0588 * l) - (0.296 * s) -15.8;
+    float result = (0.0588 * l) - (0.296 * s) - 15.8;
     float rounded_result = round(result);
 
     if (rounded_result < 1)
@@ -34,22 +34,21 @@ int main(void)
     {
         printf("Grade %.0f\n", rounded_result);
     }
-
 }
 
 int count_letters(string text)
 {
-   int letter = 0;
-   int len = strlen(text);
+    int letter = 0;
+    int len = strlen(text);
 
-   for(int i = 0; i < len; i++)
-   {
-    if(isalpha(text[i]))
+    for (int i = 0; i < len; i++)
     {
-        letter++;
+        if (isalpha(text[i]))
+        {
+            letter++;
+        }
     }
-   }
-   return letter;
+    return letter;
 }
 
 int count_words(string text)
