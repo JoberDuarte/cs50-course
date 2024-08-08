@@ -7,8 +7,8 @@
 
 int main(int argc, string argv[])
 {
-    int len = (atoi(argv[1]));
-    
+    int len = (argv[1]);
+
     printf("%i\n", len);
 }
 
