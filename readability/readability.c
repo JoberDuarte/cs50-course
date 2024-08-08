@@ -16,8 +16,8 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
 
-    int l = (float) letter / words *100;
-    int s = (float) sentences / words *100;
+    float l = (float) letter / words *100;
+    float s = (float) sentences / words *100;
 
     float result = (0.0588 * l) - (0.296 * s) -15.8;
     float rounded_result = round(result);
@@ -41,8 +41,8 @@ int main(void)
     printf("Words : %i\n", words);
     printf("Sentences : %i\n", sentences);
 
-    printf("L : %i\n", l);
-    printf("S : %i\n", s);
+    printf("L : %f\n", l);
+    printf("S : %f\n", s);
 
 }
 
