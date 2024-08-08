@@ -35,15 +35,6 @@ int main(void)
         printf("Grade %.0f\n", rounded_result);
     }
 
-
-
-    printf("Letters : %i\n", letter);
-    printf("Words : %i\n", words);
-    printf("Sentences : %i\n", sentences);
-
-    printf("L : %f\n", l);
-    printf("S : %f\n", s);
-
 }
 
 int count_letters(string text)
