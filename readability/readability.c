@@ -79,8 +79,5 @@ int count_sentences(string text)
             sentences++ ;
         }
     }
-
-
-    
     return sentences;
 }
