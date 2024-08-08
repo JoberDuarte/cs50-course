@@ -6,5 +6,5 @@
 int main(int argc, string argv[])
 {
     int len = strlen(argv[1]);
-    printf("%i")
+    printf("%i\n");
 }
