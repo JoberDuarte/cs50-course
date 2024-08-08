@@ -29,6 +29,9 @@ int main(void)
     printf("Words : %i\n", words);
     printf("Sentences : %i\n", sentences);
 
+    printf("L : %f\n", l);
+    printf("S : %f\n", s);
+
     printf("Index : %f\n", index);
 
 
