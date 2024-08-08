@@ -19,7 +19,8 @@ int main(void)
     int l = (float) letter / words *100;
     int s = (float) sentences / words *100;
 
-    float index = (0.0588 * l) - (0.296 * s) -15.8;
+    float result = (0.0588 * l) - (0.296 * s) -15.8;
+    float rounded_result = round(result);
 
 
 
@@ -30,7 +31,7 @@ int main(void)
     printf("L : %i\n", l);
     printf("S : %i\n", s);
 
-    printf("Index : %f\n", index);
+    printf("Index : %f\n", result);
 
 
 }
