@@ -23,8 +23,6 @@ int main(void)
 
 
 
-
-
     printf("Letters : %i\n", letter);
     printf("Words : %i\n", words);
     printf("Sentences : %i\n", sentences);
