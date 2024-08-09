@@ -75,7 +75,8 @@ int main(int argc, string argv[])
 
 }
 
-bool validation(key)
+int validation(key)
+
 int len = strlen(key);
 
     if (len != 26)
