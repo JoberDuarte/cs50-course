@@ -22,7 +22,7 @@ int main(int argc, string argv[])
     }
 
     string plaintext = get_string("plaintext: ");
-    printf("ciphertext: ");
+
 
     int len_plaintext = strlen(plaintext);
 
@@ -34,19 +34,20 @@ int main(int argc, string argv[])
         if(isupper(plaintext[i]))
         {
             result = (plaintext[i] - 'A');
-            printf("%c", toupper(argv[1][result]));
+            strcat(cipher, "%c", toupper(argv[1][result]));
         }
         else if(islower(plaintext[i]))
         {
             result = (plaintext[i] - 'a');
-            printf("%c", tolower(argv[1][result]));
+            strcat(cipher, "%c", tolower(argv[1][result]));
         }
         else
         {
-            printf("%c", plaintext[i]);
+            strcat(cipher,"%c", plaintext[i]);
         }
 
     }
+    printf("ciphertext: %s", cipher);
     printf("\n");
 
 

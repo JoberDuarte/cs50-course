@@ -102,3 +102,25 @@ char substitute(char c, string key)
     }
     printf("\n");
 }
+
+
+
+for(int i = 0; i < len_plaintext; i++)
+    {
+        if(isupper(plaintext[i]))
+        {
+            result = (plaintext[i] - 'A');
+            printf("%c", toupper(argv[1][result]));
+        }
+        else if(islower(plaintext[i]))
+        {
+            result = (plaintext[i] - 'a');
+            printf("%c", tolower(argv[1][result]));
+        }
+        else
+        {
+            printf("%c", plaintext[i]);
+        }
+
+    }
+    printf("\n");
