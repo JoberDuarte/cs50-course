@@ -54,16 +54,16 @@ int main(int argc, string argv[])
         if(isupper(plaintext[i]))
         {
             result = (plaintext[i] - 'A');
-            printf("%c", argv[result]);
+            printf("%s", argv[result]);
         }
         else if(islower(plaintext[i]))
         {
             result = (plaintext[i] - 'a');
-            prinf("%c", argv[result]);
+            printf("%s", argv[result]);
         }
         else
         {
-            printf("%c", plaintext[i]);
+            printf("%s", plaintext[i]);
         }
 
     }
