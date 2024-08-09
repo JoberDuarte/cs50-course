@@ -34,16 +34,16 @@ int main(int argc, string argv[])
         if(isupper(plaintext[i]))
         {
             result = (plaintext[i] - 'A');
-            strcat(cipher, "%c", toupper(argv[1][result]));
+            printf("%c", toupper(argv[1][result]));
         }
         else if(islower(plaintext[i]))
         {
             result = (plaintext[i] - 'a');
-            strcat(cipher, "%c", tolower(argv[1][result]));
+            printf("%c", tolower(argv[1][result]));
         }
         else
         {
-            strcat(cipher,"%c", plaintext[i]);
+            printf("%c", plaintext[i]);
         }
 
     }
