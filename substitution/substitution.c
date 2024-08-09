@@ -22,9 +22,9 @@ int main(int argc, string argv[])
     }
 
     string plaintext = get_string("plaintext: ");
-    string ciphertext = cipher(argv[1],plaintext)ç
+    string ciphertext = cipher(argv[1],plaintext);
 
-    printf("ciphertext: %s", cipphertext);
+    printf("ciphertext: %s", ciphertext);
 
 
 
