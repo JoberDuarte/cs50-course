@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+int validation(key);
 
 int main(int argc, string argv[])
 {
@@ -14,37 +15,11 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    int len = strlen(argv[1]);
-
-    if (len != 26)
+    if(!validantion(argv[1]))
     {
-        printf("KEY must contain 26 characters\n");
         return 1;
     }
 
-    printf("%i\n", len);
-
-    for (int i = 0; i < len; i++)
-    {
-        if(!isalpha(argv[1][i]))
-        {
-            printf("KEY must contain only alphabetic characters\n");
-        return 1;
-
-        }
-    }
-    for (int i = 0; i < len; i++)
-    {
-
-        for(int j = i+1; j < len ; j++)
-        {
-            if(argv[1][i] == argv[1][j])
-            {
-                printf("KEY must not contain repeated characters\n");
-                return 1;
-            }
-        }
-    }
 
     string plaintext = get_string("plaintext: ");
 
