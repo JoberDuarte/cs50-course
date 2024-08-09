@@ -76,6 +76,34 @@ int main(int argc, string argv[])
 }
 
 bool validation(key)
-{
+int len = strlen(key);
 
-}
+    if (len != 26)
+    {
+        printf("KEY must contain 26 characters\n");
+        return 1;
+    }
+
+    printf("%i\n", len);
+
+    for (int i = 0; i < len; i++)
+    {
+        if(!isalpha(key[i]))
+        {
+            printf("KEY must contain only alphabetic characters\n");
+        return 1;
+
+        }
+    }
+    for (int i = 0; i < len; i++)
+    {
+
+        for(int j = i+1; j < len ; j++)
+        {
+            if(key[i] == key[j])
+            {
+                printf("KEY must not contain repeated characters\n");
+                return 1;
+            }
+        }
+    }
