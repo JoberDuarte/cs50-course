@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 int validation(string key);
-void cipher(string key, string plaintext);
+
 
 int main(int argc, string argv[])
 {
@@ -22,16 +22,31 @@ int main(int argc, string argv[])
     }
 
     string plaintext = get_string("plaintext: ");
-    string ciphertext = cipher(argv[1],plaintext);
+    printf("ciphertext: ");
 
-    printf("ciphertext: %s", ciphertext);
+    int len_plaintext = strlen(plaintext);
 
+    int result = 0;
 
+    for(int i = 0; i < len_plaintext; i++)
+    {
+        if(isupper(plaintext[i]))
+        {
+            result = (plaintext[i] - 'A');
+            printf("%c", toupper(argv[1][result]));
+        }
+        else if(islower(plaintext[i]))
+        {
+            result = (plaintext[i] - 'a');
+            printf("%c", tolower(argv[1][result]));
+        }
+        else
+        {
+            printf("%c", plaintext[i]);
+        }
 
-
-
-
-
+    }
+    printf("\n");
 
 
 }
@@ -70,30 +85,4 @@ int validation(string key)
     return 0;
 }
 
-void cipher(string key, string plaintext)
-{
-    int len_plaintext = strlen(plaintext);
-    
-    int result = 0;
 
-    for(int i = 0; i < len_plaintext; i++)
-    {
-        if(isupper(plaintext[i]))
-        {
-            result = (plaintext[i] - 'A');
-            printf("%c", toupper(key[result]));
-        }
-        else if(islower(plaintext[i]))
-        {
-            result = (plaintext[i] - 'a');
-            printf("%c", tolower(key[result]));
-        }
-        else
-        {
-            printf("%c", plaintext[i]);
-        }
-
-    }
-    printf("\n");
-
-}
