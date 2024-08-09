@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int validation(key);
+int validation(string key);
 
 int main(int argc, string argv[])
 {
@@ -15,7 +15,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    if(!validantion(argv[1]))
+    if(!validation(argv[1]))
     {
         return 1;
     }
@@ -50,7 +50,7 @@ int main(int argc, string argv[])
 
 }
 
-int validation(key)
+int validation(string key)
 
 int len = strlen(key);
 
