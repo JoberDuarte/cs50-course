@@ -74,4 +74,4 @@ int main(int argc, string argv[])
 
 }
 
-char substitute(char c, char key)
+char substitute(char c, char *key)
