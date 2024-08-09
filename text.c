@@ -76,27 +76,27 @@ int main(int argc, string argv[])
 
 char substitute(char c, string key)
 {
-    string plaintext = get_string("plaintext: ");
+    string c = get_string("plaintext: ");
 
     printf("Testando ate aqui\n");
 
-    int len_plaintext = strlen(plaintext);
+    int len_c = strlen(c);
     int result = 0;
-    for(int i = 0; i < len_plaintext; i++)
+    for(int i = 0; i < len_c; i++)
     {
-        if(isupper(plaintext[i]))
+        if(isupper(c[i]))
         {
-            result = (plaintext[i] - 'A');
-            printf("%c", argv[1][result]);
+            result = (c[i] - 'A');
+            printf("%c", key[1][result]);
         }
-        else if(islower(plaintext[i]))
+        else if(islower(c[i]))
         {
-            result = (plaintext[i] - 'a');
-            printf("%c", argv[1][result]);
+            result = (c[i] - 'a');
+            printf("%c", key[1][result]);
         }
         else
         {
-            printf("%c", plaintext[i]);
+            printf("%c", c[i]);
         }
 
     }
