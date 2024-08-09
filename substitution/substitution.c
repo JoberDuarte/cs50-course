@@ -73,7 +73,9 @@ int validation(string key)
 void cipher(string key, string plaintext)
 {
     int len_plaintext = strlen(plaintext);
+    
     int result = 0;
+
     for(int i = 0; i < len_plaintext; i++)
     {
         if(isupper(plaintext[i]))
