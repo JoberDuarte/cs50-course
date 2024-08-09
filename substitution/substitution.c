@@ -27,7 +27,7 @@ int main(int argc, string argv[])
     int len_plaintext = strlen(plaintext);
 
     int result = 0;
-    string cipher;
+    string cipher[];
 
     for(int i = 0; i < len_plaintext; i++)
     {
