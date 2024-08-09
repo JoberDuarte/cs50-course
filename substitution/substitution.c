@@ -31,12 +31,12 @@ int main(int argc, string argv[])
         if(isupper(plaintext[i]))
         {
             result = (plaintext[i] - 'A');
-            printf("%c", argv[1][result]);
+            printf("%c", toupper(argv[1][result]));
         }
         else if(islower(plaintext[i]))
         {
             result = (plaintext[i] - 'a');
-            printf("%c", argv[1][result]);
+            printf("%c", tolower(argv[1][result]));
         }
         else
         {
