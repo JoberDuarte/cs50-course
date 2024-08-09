@@ -51,7 +51,7 @@ int main(int argc, string argv[])
         }
 
     }
-    cypher[end] = \0
+    cipher[end] = '\0';
     printf("ciphertext: %s", cipher);
     printf("\n");
 
