@@ -78,16 +78,16 @@ string cipher(string key, string plaintext)
         if(isupper(plaintext[i]))
         {
             result = (plaintext[i] - 'A');
-            printf("%c", toupper(key[result]));
+            printf("%d", toupper(key[result]));
         }
         else if(islower(plaintext[i]))
         {
             result = (plaintext[i] - 'a');
-            printf("%c", tolower(key[result]));
+            printf("%d", tolower(key[result]));
         }
         else
         {
-            printf("%c", plaintext[i]);
+            printf("%d", plaintext[i]);
         }
 
     }
