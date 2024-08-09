@@ -27,6 +27,7 @@ int main(int argc, string argv[])
     int len_plaintext = strlen(plaintext);
 
     int result = 0;
+    int end = 0;
     string cipher[];
 
     for(int i = 0; i < len_plaintext; i++)
@@ -34,7 +35,7 @@ int main(int argc, string argv[])
         if(isupper(plaintext[i]))
         {
             result = (plaintext[i] - 'A');
-            printf("%c", toupper(argv[1][result]));
+            ("%c", toupper(argv[1][result]));
         }
         else if(islower(plaintext[i]))
         {
