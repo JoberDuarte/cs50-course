@@ -15,7 +15,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    if(!validation(argv[1]))
+    if(validation(argv[1]))
     {
         return 1;
     }
