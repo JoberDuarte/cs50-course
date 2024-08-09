@@ -35,16 +35,19 @@ int main(int argc, string argv[])
         if(isupper(plaintext[i]))
         {
             result = (plaintext[i] - 'A');
-            ("%c", toupper(argv[1][result]));
+            cipher[end] = toupper(argv[1][result]);
+            end++;
         }
         else if(islower(plaintext[i]))
         {
             result = (plaintext[i] - 'a');
-            printf("%c", tolower(argv[1][result]));
+            cipher[end] = tolower(argv[1][result]);
+            end++;
         }
         else
         {
-            printf("%c", plaintext[i]);
+            cipher[end] =  plaintext[i];
+            end++
         }
 
     }
