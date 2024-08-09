@@ -53,6 +53,7 @@ int main(int argc, string argv[])
     {
         if(isupper(plaintext[i]))
         {
+            result ==(plaintext[i] - 'A');
             
         }
 
