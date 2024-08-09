@@ -22,7 +22,7 @@ int main(int argc, string argv[])
 
     string plaintext = get_string("plaintext: ");
 
-    
+
 
 
 
@@ -85,3 +85,5 @@ int validation(string key)
     }
     return 0;
 }
+
+
