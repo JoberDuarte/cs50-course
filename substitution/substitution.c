@@ -59,8 +59,6 @@ int validation(string key)
         return 1;
     }
 
-    printf("%i\n", len);
-
     for (int i = 0; i < len; i++)
     {
         if(!isalpha(key[i]))
