@@ -74,3 +74,8 @@ int main(int argc, string argv[])
 
 
 }
+
+bool validation(key)
+{
+
+}
