@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 int validation(string key);
-string cipher(string key, string plaintext);
+void cipher(string key, string plaintext);
 
 int main(int argc, string argv[])
 {
@@ -69,7 +69,7 @@ int validation(string key)
     return 0;
 }
 
-string cipher(string key, string plaintext)
+void cipher(string key, string plaintext)
 {
     int len_plaintext = strlen(plaintext);
     int result = 0;
@@ -92,5 +92,5 @@ string cipher(string key, string plaintext)
 
     }
     printf("\n");
-    return cipher;
+
 }
