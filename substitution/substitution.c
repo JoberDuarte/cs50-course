@@ -47,6 +47,8 @@ int main(int argc, string argv[])
 
     string plaintext = get_string("plaintext: ");
 
+    printf("Testando ate aqui\n");
+
     int len_plaintext = strlen(plaintext);
     int result = 0;
     for(int i = 0; i < len_plaintext; i++)
