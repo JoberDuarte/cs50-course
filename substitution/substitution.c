@@ -28,7 +28,7 @@ int main(int argc, string argv[])
 
     int result = 0;
     int end = 0;
-    string cipher[len_plaintext];
+    char cipher[len_plaintext];
 
     for(int i = 0; i < len_plaintext; i++)
     {
@@ -47,7 +47,7 @@ int main(int argc, string argv[])
         else
         {
             cipher[end] =  plaintext[i];
-            end++
+            end++;
         }
 
     }
