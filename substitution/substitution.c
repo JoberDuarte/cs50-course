@@ -63,7 +63,7 @@ int main(int argc, string argv[])
         }
         else
         {
-            printf("%c")
+            printf("%c", plaintext[i]);
         }
 
     }
