@@ -51,7 +51,7 @@ int main(int argc, string argv[])
 
     for(int i = 0; i < len_plaintext; i++)
     {
-        if()
+        if(plaintext[i])
     }
 
 
