@@ -58,7 +58,12 @@ int main(int argc, string argv[])
         }
         else if(islower(plaintext[i]))
         {
-            result == 
+            result == (plaintext[i] - 'a');
+            prinf("%c", argv[result]);
+        }
+        else
+        {
+            printf("%c")
         }
 
     }
