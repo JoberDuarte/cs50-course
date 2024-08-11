@@ -1,6 +1,6 @@
 sort1 uses: Bubble sort
 
-How do you know?: TODO
+How do you know?: It was the program that took the longest to sort a fully reverted list. which is the worst case for bubble sort
 
 sort2 uses: Marge Sort
 
