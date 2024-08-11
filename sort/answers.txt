@@ -1,6 +1,6 @@
 sort1 uses: Bubble sort
 
-How do you know?: It was the program that took the longest to sort a fully reverted list. which is the worst case for bubble sort
+How do you know?: This was the program that took the longest time to sort a completely reversed list That is the worst case for bubble sort O(n²)
 
 sort2 uses: Marge Sort
 
