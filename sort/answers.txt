@@ -4,7 +4,7 @@ How do you know?: This was the program that took the longest time to sort a comp
 
 sort2 uses: Marge Sort
 
-How do you know?: TODO
+How do you know?: This was the fastest program to sort the lists in the 3 cases (this became more evident in the larger lists like 50000)
 
 sort3 uses: Selection Sort
 
