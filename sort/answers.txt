@@ -8,4 +8,4 @@ How do you know?: This was the fastest program to sort the lists in the 3 cases 
 
 sort3 uses: Selection Sort
 
-How do you know?: TODO
+How do you know?: This program took the same execution time no matter how the list was sorted, O(n²) and Ω(n²) And it was less efficient in the sorted list than sort1
