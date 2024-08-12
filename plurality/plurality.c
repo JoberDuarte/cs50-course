@@ -68,7 +68,8 @@ bool vote(string name)
 {
     for(i = 1; i <= candidate_count; i++)
     {
-        if(name == ca)
+        if(name == candidates[i].name)
+        candidates[i].votes++;
     }
 
     return false;
