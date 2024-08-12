@@ -133,7 +133,8 @@ bool vote(int voter, int rank, string name)
         {
             if(strcmp(name, candidates[i].name))
             {
-                voter[i][j] == 
+                voter[i][j] == candidates[i].name;
+                return true;
             }
         }
     }
