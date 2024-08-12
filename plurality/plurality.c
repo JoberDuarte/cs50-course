@@ -75,10 +75,10 @@ bool vote(string name)
         }
         else
         {
-            return false;
+
         }
     }
-
+    return false;
 }
 
 // Print the winner (or winners) of the election
