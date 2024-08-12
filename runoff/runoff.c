@@ -127,6 +127,13 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
+        typedef struct
+    {
+        string name;
+        int votes;
+        bool eliminated;
+    } candidate;
+
     // TODO
     for(int i = 0; i < voter_count; i ++)
     {
