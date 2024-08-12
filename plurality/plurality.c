@@ -61,7 +61,7 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("Name:%s  Votes:%i ",candidates[i].name,candidates[i].votes );
+        printf("Name: %s  Votes: %i\n",candidates[i].name,candidates[i].votes );
     }
 
 
