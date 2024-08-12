@@ -127,12 +127,6 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-        typedef struct
-    {
-        string name;
-        int votes;
-        bool eliminated;
-    } candidate;
 
     // TODO
     for(int i = 0; i < voter_count; i ++)
@@ -141,7 +135,7 @@ bool vote(int voter, int rank, string name)
         {
             if (strcmp(name, candidates[i].name) == 0)
             {
-                voter[i][j] == candidates[i].name;
+                preferences[i][j] = candidates[i].name;
                 return true;
             }
         }
