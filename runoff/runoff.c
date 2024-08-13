@@ -165,7 +165,7 @@ bool print_winner(void)
 {
     // TODO
     int winner = 0;
-    for (int i = 0; i < candidate_cout; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if(candidates[i].votes > winner)
         {
@@ -174,7 +174,12 @@ bool print_winner(void)
         }
     }
     if (winner > (voter_count/2))
+    {
+        return true;
+    }
+    else
     return false;
+
 }
 
 // Return the minimum number of votes any remaining candidate has
