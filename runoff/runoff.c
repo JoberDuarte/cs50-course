@@ -169,7 +169,8 @@ bool print_winner(void)
     {
         if(candidates[i].votes > winner)
         {
-            winner > candidates[i].votes;
+            winner = candidates[i].votes;
+            return true;
         }
     }
     if (winner > (voter_count/2))
