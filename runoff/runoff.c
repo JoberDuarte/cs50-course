@@ -172,13 +172,18 @@ bool print_winner(void)
             winner = candidates[i].votes;
         }
     }
-    if (candidates[i].votes > (voter_count/2))
+    for ( int i = 0; i < candidate_count; i++)
     {
-        printf("%s\n", candidates[i].votes)
-        return true;
+        if (candidates[i].votes > (voter_count/2))
+        {
+            printf("%s\n", candidates[i].name);
+            return true;
+        }
+        else
+        eturn false;
+
     }
-    else
-    return false;
+
 
 }
 
