@@ -174,6 +174,7 @@ bool print_winner(void)
     }
     if (winner > (voter_count/2))
     {
+        
         return true;
     }
     else
