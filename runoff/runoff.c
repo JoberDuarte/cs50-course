@@ -172,9 +172,9 @@ bool print_winner(void)
             winner = candidates[i].votes;
         }
     }
-    if (winner > (voter_count/2))
+    if (candidates[i].votes > (voter_count/2))
     {
-        printf("")
+        printf("%s\n", candidates[i].votes)
         return true;
     }
     else
