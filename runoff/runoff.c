@@ -155,9 +155,7 @@ void tabulate(void)
                 candidates[preferences[i][j]].votes++;
                 break;
             }
-
         }
-
     }
     return;
 }
@@ -166,6 +164,14 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    int winner = 0;
+    for (int i = 0; i < candidate_cout; i++)
+    {
+        if(candidates[i].votes > winner)
+        {
+            winner > candidates[i].votes;
+        }
+    }
     return false;
 }
 
