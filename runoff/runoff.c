@@ -172,6 +172,7 @@ bool print_winner(void)
             winner > candidates[i].votes;
         }
     }
+    if (winner > (voter_count/2))
     return false;
 }
 
