@@ -10,6 +10,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0, j < width, j++)
         {
+            fread(&buffer_r, 1, 1, image[i][j].rgbtRed)
+            fread(&buffer_g, 1, 1, image[i][j].rgbtGreen)
             fread(&buffer_b, 1, 1, image[i][j].rgbtBlue)
 
         }
