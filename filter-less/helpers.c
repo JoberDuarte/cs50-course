@@ -3,11 +3,15 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
+    uint8_t buffer_r;
+    uint8_t buffer_g;
+    uint8_t buffer_b;
     for(int i = 0, i < height, i++)
     {
         for (int j = 0, j < width, j++)
         {
-            
+            fread(&buffer_b, 1, 1, image[i][j].rgbtBlue)
+
         }
     }
     return;
