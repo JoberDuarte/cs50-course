@@ -7,7 +7,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width ; j++)
         {
-            float media =  ((image[i][j].rgbtRed + image[i][j].rgbtGreen +image[i][j].rgbtBlue )/ 3);
+            float media =  (((float)image[i][j].rgbtRed + image[i][j].rgbtGreen +image[i][j].rgbtBlue )/ 3);
             image[i][j].rgbtRed = (uint8_t)media;
             image[i][j].rgbtGreen = (uint8_t)media;
             image[i][j].rgbtBlue = (uint8_t)media;
