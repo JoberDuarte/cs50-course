@@ -21,6 +21,9 @@ int main(int argc, char *argv[])
  uint8_t buffer[512];
 
  while (fread(&buffer, 1, 512, card) == 512)
+ {
+    
+ }
 
 
 }
