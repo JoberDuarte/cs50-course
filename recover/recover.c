@@ -28,7 +28,12 @@ int main(int argc, char *argv[])
      sprintf(image,"%03i.jpg", 2);
      FILE *image = fopen(image, "w");
 
-     while()
+    while(buffer[0] != 0xff && buffer[1] != 0xd8 && buffer[2] != 0xff && (buffer[3] & 0xf0) != 0xe0)
+      {
+         fwrite(&buffer, 1, 512, image);
+
+      }
+
 
 
     }
