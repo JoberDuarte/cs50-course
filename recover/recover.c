@@ -26,11 +26,10 @@ int main(int argc, char *argv[])
    FILE *image = NULL;
 
 while (fread(&buffer, 1, 512, card) == 512)
- {
+{
 
     if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0)== 0xe0))
-
-      {
+    {
 
          if(image != NULL)
          {
@@ -41,8 +40,10 @@ while (fread(&buffer, 1, 512, card) == 512)
          sprintf(filename,"%03i.jpg",count_image );
          count_image++;
          image = fopen(filename, "w");
+    }
 
-         if(image != NULL)
+
+      if(image != NULL)
          {
                fwrite(&buffer, 1, 512, image);
          }
