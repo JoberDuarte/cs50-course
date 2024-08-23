@@ -26,19 +26,22 @@ int main(int argc, char *argv[])
  while (fread(&buffer, 1, 512, card) == 512)
  {
     if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0)== 0xe0))
-    {
-     char *filename[7];
-     sprintf(filename,"%03i.jpg",count_image );
-     count_image++;
-     FILE *image = fopen(filename, "w");
 
-    while(buffer[0] != 0xff && buffer[1] != 0xd8 && buffer[2] != 0xff && (buffer[3] & 0xf0) != 0xe0)
       {
-         fwrite(&buffer, 1, 512, image);
+      
+
+         char *filename[7];
+         sprintf(filename,"%03i.jpg",count_image );
+         count_image++;
+         FILE *image = fopen(filename, "w");
+         if
 
       }
 
-    }
+      if
+         {
+               fwrite(&buffer, 1, 512, image);
+         }
     fclose(image);
  }
 
