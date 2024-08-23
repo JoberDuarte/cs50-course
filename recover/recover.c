@@ -39,7 +39,8 @@ int main(int argc, char *argv[])
       }
 
     }
+    fclose(image);
  }
- fclose(image);
+
 
 }
