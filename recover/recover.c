@@ -31,6 +31,11 @@ int main(int argc, char *argv[])
     if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0)== 0xe0))
 
       {
+          if(image == NULL)
+         {
+            return 1;
+         }
+         
          if(image != NULL)
          {
             fclose(image);
@@ -40,11 +45,6 @@ int main(int argc, char *argv[])
          sprintf(filename,"%03i.jpg",count_image );
          count_image++;
          image = fopen(filename, "w");
-
-         else if(image == NULL)
-         {
-            return 1;
-         }
 
          else
          {
