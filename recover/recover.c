@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
    uint8_t buffer[512];
 
    int count_image = 0;
+   
    FILE *image = NULL;
 
  while (fread(&buffer, 1, 512, card) == 512)
