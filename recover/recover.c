@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
             return 1;
          }
 
-         if(image != NULL)
+         else
          {
                fwrite(&buffer, 1, 512, image);
          }
