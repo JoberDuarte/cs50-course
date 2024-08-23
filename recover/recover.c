@@ -43,18 +43,18 @@ while (fread(&buffer, 1, 512, card) == 512)
     }
 
 
-      if(image != NULL)
+      if (image != NULL)
          {
                fwrite(&buffer, 1, 512, image);
          }
 
 
-      }
 }
-if(image != NULL)
-{
+
+if (image != NULL)
+   {
    fclose(image);
-}
+   }
 
 fclose(card);
 }
