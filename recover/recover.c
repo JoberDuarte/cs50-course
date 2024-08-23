@@ -1,8 +1,6 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
-
-
 
 int main(int argc, char *argv[])
 {
@@ -19,42 +17,40 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-   uint8_t buffer[512];
+    uint8_t buffer[512];
 
-   int count_image = 0;
+    int count_image = 0;
 
-   FILE *image = NULL;
+    FILE *image = NULL;
 
-while (fread(buffer, 1, 512, card) == 512)
-{
-
-    if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0)== 0xe0))
+    while (fread(buffer, 1, 512, card) == 512)
     {
 
-         if(image != NULL)
-         {
-            fclose(image);
-         }
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
+            ((buffer[3] & 0xf0) == 0xe0))
+        {
 
-         char filename[8];
-         sprintf(filename,"%03i.jpg",count_image );
-         count_image++;
-         image = fopen(filename, "w");
+            if (image != NULL)
+            {
+                fclose(image);
+            }
+
+            char filename[8];
+            sprintf(filename, "%03i.jpg", count_image);
+            count_image++;
+            image = fopen(filename, "w");
+        }
+
+        if (image != NULL)
+        {
+            fwrite(&buffer, 1, 512, image);
+        }
     }
 
+    if (image != NULL)
+    {
+        fclose(image);
+    }
 
-      if (image != NULL)
-         {
-               fwrite(&buffer, 1, 512, image);
-         }
-
-
-}
-
-if (image != NULL)
-   {
-   fclose(image);
-   }
-
-fclose(card);
+    fclose(card);
 }
