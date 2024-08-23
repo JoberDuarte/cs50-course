@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[])
 {
- if  (argv != 2 )
+ if  (argc != 2 )
  {
     printf("Usage: ./recover FILE\n");
     return 1;
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     return 1;
  }
 
- uint8_t buffer[512];
+ uint8_t; buffer[512];
 
  while (fread(&buffer, 1, 512, card) == 512)
  {
