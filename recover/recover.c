@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     {
      FILE *image = 000.jpg;
      sprintf(image,"%03i.jpg", 2);
-     FILE *image = fopen(image, "w")
+     FILE *image = fopen(image, "w"),
 
 
     }
