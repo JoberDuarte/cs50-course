@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
    FILE *image = NULL;
 
- while (fread(&buffer, 1, 512, card) == 512)
+while (fread(&buffer, 1, 512, card) == 512)
  {
 
     if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0)== 0xe0))
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
          {
             return 1;
          }
-         
+
          if(image != NULL)
          {
             fclose(image);
@@ -46,15 +46,18 @@ int main(int argc, char *argv[])
          count_image++;
          image = fopen(filename, "w");
 
-         else
+         if(image != NULL)
          {
                fwrite(&buffer, 1, 512, image);
          }
 
 
       }
-      fclose(image);
+}
+if(image != NULL)
+{
+   fclose(image);
+}
 
- }
 fclose(card);
 }
