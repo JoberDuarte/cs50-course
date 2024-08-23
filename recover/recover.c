@@ -33,16 +33,14 @@ int main(int argc, char *argv[])
          count_image++;
          FILE *image = fopen(filename, "w");
 
-         if(image != NULL)
-         {
-               fwrite(&buffer, 1, 512, image);
-         }
-
-
          if(image == NULL)
          {
             return 1;
+         }
 
+         if(image != NULL)
+         {
+               fwrite(&buffer, 1, 512, image);
          }
          fclose(image)
 
