@@ -32,7 +32,7 @@ int main(void)
             return 1;
         }
 
-        
+        n->
 
 
         // Visualize list after adding a node.
