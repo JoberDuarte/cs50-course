@@ -32,7 +32,9 @@ int main(void)
             return 1;
         }
 
-        n->
+        n -> phrase = phrase;
+        n ->next = NULL;
+
 
 
         // Visualize list after adding a node.
