@@ -41,7 +41,7 @@ person *create_family(int generations)
     // TODO: Allocate memory for new person
     person *new_person = malloc(sizeof(person));
 
-    if(new_person == NULL)
+    if (new_person == NULL)
     {
         printf("ERROR: no memory allocated to a new person\n");
         return NULL;
@@ -83,7 +83,7 @@ person *create_family(int generations)
 void free_family(person *p)
 {
     // TODO: Handle base case
-    if(p == NULL)
+    if (p == NULL)
     {
         return;
     }
