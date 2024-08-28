@@ -54,7 +54,7 @@ bool load(const char *dictionary)
     FILE *source =fopen(dictionary, "r");
     if(source != NULL)
     {
-
+        fscanf(source, "%s", word)
     }
     else
     {
