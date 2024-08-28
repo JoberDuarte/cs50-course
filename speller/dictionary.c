@@ -42,11 +42,6 @@ unsigned int hash(const char *word)
 }
 
 
-
-
-
-
-
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
@@ -79,21 +74,12 @@ bool load(const char *dictionary)
 }
 
 
-
-
-
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
     // TODO
     return 0;
 }
-
-
-
-
-
-
 
 
 // Unloads dictionary from memory, returning true if successful, else false
