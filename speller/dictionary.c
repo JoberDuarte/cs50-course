@@ -63,6 +63,7 @@ bool load(const char *dictionary)
         node *n = malloc(sizeof(node));
         if(n == NULL)
         {
+             fclose(source);
              return false;
         }
 
@@ -72,7 +73,7 @@ bool load(const char *dictionary)
         n->next = table[index];
         table[index] = n;
        }
-       
+
     fclose(source);
     return true;
 }
