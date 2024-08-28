@@ -73,6 +73,7 @@ bool load(const char *dictionary)
 
     }
     fclose(source);
+    return true;
 }
 
 
