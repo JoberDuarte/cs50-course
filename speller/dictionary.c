@@ -55,6 +55,9 @@ bool load(const char *dictionary)
     if(source != NULL)
     {
        while(fscanf(source, "%s", word) != EOF)
+       {
+        
+       }
     }
     else
     {
