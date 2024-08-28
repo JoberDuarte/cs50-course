@@ -18,6 +18,12 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
+
+
+
+
+
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -25,12 +31,21 @@ bool check(const char *word)
     return false;
 }
 
+
+
+
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     return toupper(word[0]) - 'A';
 }
+
+
+
+
+
+
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
@@ -48,12 +63,23 @@ bool load(const char *dictionary)
     fclose(source)
 }
 
+
+
+
+
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
     // TODO
     return 0;
 }
+
+
+
+
+
+
+
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
