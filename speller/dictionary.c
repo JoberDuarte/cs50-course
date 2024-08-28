@@ -39,8 +39,9 @@ bool load(const char *dictionary)
     FILE *source =fopen(dictionary, "r");
     if(source == NULL)
     {
-        return f;
+       return 1;
     }
+    fclose(source)
     return false;
 }
 
