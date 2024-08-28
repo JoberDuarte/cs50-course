@@ -52,18 +52,24 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE *source =fopen(dictionary, "r");
-    if(source != NULL)
+    if(source == NULL)
     {
-       while(fscanf(source, "%s", word) != EOF)
-       {
+         return false;
+    }
+
+    while(fscanf(source, "%s", word) != EOF)
+    {
         node *n = malloc(sizeof(node));
+        if(n == NULL)
+        {
+             return false;
+        }
+        
         strcpy(n->word,"%s");
         n->next = NULL;
        }
-    }
-    else
     {
-        return false;
+
     }
     fclose(source);
 }
