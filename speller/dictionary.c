@@ -37,12 +37,15 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE *source =fopen(dictionary, "r");
-    if(source == NULL)
+    if(source != NULL)
     {
-       return 1;
+
+    }
+    else
+    {
+        return false;
     }
     fclose(source)
-    return false;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
