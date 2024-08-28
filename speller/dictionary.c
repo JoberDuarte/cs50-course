@@ -64,9 +64,10 @@ bool load(const char *dictionary)
         {
              return false;
         }
-        
-        strcpy(n->word,"%s");
-        n->next = NULL;
+
+        strcpy(n->word, word);
+        n->next = hash;
+        hash = n;
        }
     {
 
