@@ -37,7 +37,10 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE *source =fopen(dictionary, "r");
-    
+    if(source == NULL)
+    {
+        return f;
+    }
     return false;
 }
 
