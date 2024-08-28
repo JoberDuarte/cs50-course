@@ -56,14 +56,16 @@ bool load(const char *dictionary)
     {
        while(fscanf(source, "%s", word) != EOF)
        {
-        
+        node *n = malloc(sizeof(node));
+        strcpy(n->word,"%s");
+        n->next = NULL;
        }
     }
     else
     {
         return false;
     }
-    fclose(source)
+    fclose(source);
 }
 
 
