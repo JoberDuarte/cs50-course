@@ -1,7 +1,7 @@
 // Implements a dictionary's functionality
-#include <stdio.h>
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
@@ -21,11 +21,9 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
-
-//Variables
+// Variables
 unsigned int hash_index;
 unsigned int count_words;
-
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -34,9 +32,9 @@ bool check(const char *word)
     hash_index = hash(word);
     node *cursor = table[hash_index];
 
-    while(cursor != 0)
+    while (cursor != 0)
     {
-        if(strcasecmp(word, cursor->word) == 0)
+        if (strcasecmp(word, cursor->word) == 0)
         {
             return true;
         }
@@ -46,43 +44,38 @@ bool check(const char *word)
     return false;
 }
 
-
-
-
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     int total = 0;
 
-    for(int i = 0; i < 3 && word[i] != '\0'; i++)
+    for (int i = 0; i < 3 && word[i] != '\0'; i++)
 
     {
         total += toupper(word[i]);
     }
     return total % N;
-
 }
-
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *source =fopen(dictionary, "r");
-    if(source == NULL)
+    FILE *source = fopen(dictionary, "r");
+    if (source == NULL)
     {
-         return false;
+        return false;
     }
 
     char word[LENGTH + 1];
-    while(fscanf(source, "%s", word) != EOF)
+    while (fscanf(source, "%s", word) != EOF)
     {
         node *n = malloc(sizeof(node));
-        if(n == NULL)
+        if (n == NULL)
         {
-             fclose(source);
-             return false;
+            fclose(source);
+            return false;
         }
 
         strcpy(n->word, word);
@@ -90,25 +83,22 @@ bool load(const char *dictionary)
         n->next = table[hash_index];
         table[hash_index] = n;
         count_words++;
-       }
+    }
 
     fclose(source);
     return true;
 }
 
-
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
     // TODO
-    if(count_words > 0)
+    if (count_words > 0)
     {
         return count_words;
     }
     return 0;
 }
-
-
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
@@ -118,7 +108,7 @@ bool unload(void)
     {
         node *cursor = table[i];
 
-        while(cursor != NULL)
+        while (cursor != NULL)
         {
             node *tmp = cursor;
 
