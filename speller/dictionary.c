@@ -19,6 +19,11 @@ const unsigned int N = 26;
 node *table[N];
 
 
+//Variables
+unsigned int index;
+unsigned int count_words;
+
+
 
 
 
@@ -63,10 +68,10 @@ bool load(const char *dictionary)
         }
 
         strcpy(n->word, word);
-        int index = hash(word);
+        index = hash(word);
         n->next = table[index];
         table[index] = n;
-        int count_word++;
+        count_words++;
        }
 
     fclose(source);
@@ -78,7 +83,11 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    if(count_words != 0)
+    {
+        return count_words;
+    }
+
 }
 
 
