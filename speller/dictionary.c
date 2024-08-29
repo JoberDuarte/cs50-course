@@ -102,7 +102,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    if(count_words != 0)
+    if(count_words > 0)
     {
         return count_words;
     }
