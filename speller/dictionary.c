@@ -62,8 +62,7 @@ unsigned int hash(const char *word)
 
     for(int i = 0; i < 3; i++)
     {
-        total =+ toupper(word[i]);
-        i++;
+        total += toupper(word[i]);
     }
     return total % N;
 
