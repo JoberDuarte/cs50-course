@@ -63,7 +63,6 @@ bool load(const char *dictionary)
         }
 
         strcpy(n->word, word);
-
         int index = hash(word);
         n->next = table[index];
         table[index] = n;
