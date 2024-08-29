@@ -58,15 +58,14 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    //
-    total = 0;
+    int total = 0;
 
     for(int i = 0, i < 3 )
     {
-        total = total * 31 + toupper(word[i]);
+        total =+ toupper(word[i]);
         i++;
     }
-    return hash % N;
+    return total % N;
 
 }
 
