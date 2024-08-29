@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include<stlib.h>
 #include<string.h>
+#include
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -34,6 +35,18 @@ unsigned int count_words;
 bool check(const char *word)
 {
     // TODO
+    index = hash(word);
+    node *cursor = table[index];
+
+    while(cursor != 0)
+    {
+        if(strcasecmp(word, cursor->word) == 0)
+        {
+            return true;
+        }
+        cursor = cursor->next;
+    }
+
     return false;
 }
 
