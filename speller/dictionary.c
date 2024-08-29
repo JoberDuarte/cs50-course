@@ -23,7 +23,7 @@ node *table[N];
 
 
 //Variables
-unsigned int index;
+unsigned int hash_index;
 unsigned int count_words;
 
 
@@ -87,9 +87,9 @@ bool load(const char *dictionary)
         }
 
         strcpy(n->word, word);
-        index = hash(word);
-        n->next = table[index];
-        table[index] = n;
+        hash_index = hash(word);
+        n->next = table[hash_index];
+        table[hash_index] = n;
         count_words++;
        }
 
