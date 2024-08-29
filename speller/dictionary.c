@@ -58,7 +58,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    // I used GPT to help me build this part
+    // 
     total = 0;
     int i = 0;
 
