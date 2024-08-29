@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include<stlib.h>
-
+#include<string.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
