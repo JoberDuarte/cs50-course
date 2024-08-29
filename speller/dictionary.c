@@ -106,8 +106,8 @@ unsigned int size(void)
     {
         return count_words;
     }
-
 }
+
 
 
 // Unloads dictionary from memory, returning true if successful, else false
