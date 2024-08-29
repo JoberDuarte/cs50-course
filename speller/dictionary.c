@@ -54,11 +54,12 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     // I had help from duck here
-    unsigned long total = 0;
+    int total = 0;
 
-    for(int i = 0; i < strlen(word); i++)
+    for(int i = 0; i < 3; i++)
+    if(word[i]!= '\0')
     {
-        total += tolower(word[i]);
+        total += toupper(word[i]);
     }
     return total % N;
 
