@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <stdbool.h>
-#include <stlib.h>
+#include <stdlib.h>
 #include <string.h>
 #include <strings.h>
 
@@ -25,11 +25,6 @@ node *table[N];
 //Variables
 unsigned int index;
 unsigned int count_words;
-
-
-
-
-
 
 
 // Returns true if word is in dictionary, else false
