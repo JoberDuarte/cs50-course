@@ -56,8 +56,8 @@ unsigned int hash(const char *word)
     // I had help from duck here
     int total = 0;
 
-    for(int i = 0; i < 3; i++)
-    if(word[i]!= '\0')
+    for(int i = 0; i < 3 && word[i] != '\0'; i++)
+    
     {
         total += toupper(word[i]);
     }
