@@ -106,6 +106,7 @@ unsigned int size(void)
     {
         return count_words;
     }
+    return 0;
 }
 
 
@@ -124,7 +125,7 @@ bool unload(void)
 
             cursor = cursor->next;
 
-            free(tmp)
+            free(tmp);
         }
     }
     return true;
