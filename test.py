@@ -1,4 +1,3 @@
-n = int(input("Height: "))
 try:
     n = int(input("Height: "))
 except ValueError:
