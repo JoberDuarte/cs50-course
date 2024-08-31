@@ -6,9 +6,7 @@ while n < 1 or n > 8:
 
 
 for i in range(n):
-    print()
     for j in range(i):
-        print(" ", end="")
-    for k in range(i):
         print("#", end="")
+    print()
 
