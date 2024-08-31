@@ -21,4 +21,3 @@ def print_pyramid(height):
 height = get_height()
 
 print_pyramid(height)
-
