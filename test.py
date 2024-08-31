@@ -5,13 +5,10 @@ while True:
         if 1 <= n <= 8:
             break
         else:
-            print("")
-
+            print("Please Enter an integer from 1 to 8")
     except ValueError:
         print("Invalid input NOT INTEGER")
 
-while n < 1 or n > 8:
-    n = int(input("Height: "))
 
 for i in range(1, n + 1):
     for k in range(n - i):
