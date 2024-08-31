@@ -1,5 +1,8 @@
 
-n = int(input("Height: "))
+try:
+    n = int(input("Height: "))
+except ValueError:
+    print("Invalid input NOT INTEGER")
 
 while n < 1 or n > 8:
     n = int(input("Height: "))
