@@ -3,7 +3,7 @@ def get_height():
         try:
             n = int(input("Height: "))
             if 1 <= n <= 8:
-                break
+                return n
             else:
                 print("Please Enter an integer from 1 to 8")
         except ValueError:
