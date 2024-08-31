@@ -2,7 +2,10 @@
 while True:
     try:
         n = int(input("Height: "))
-        if n < 1 or n > 8
+        if 1 <= n <= 8:
+            break
+        else:
+            print("")
 
     except ValueError:
         print("Invalid input NOT INTEGER")
