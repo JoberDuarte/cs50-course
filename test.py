@@ -11,7 +11,7 @@ def get_height():
 
 
 def print_pyramid(height):
-    for i in range(1, height + 1):
+    for i in range(1 , height + 1):
         print(" " * (height - 1) + "#" * i, end=" ")
         print("#" * i)
 
