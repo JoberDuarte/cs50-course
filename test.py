@@ -1,5 +1,4 @@
 
-
 n = int(input("Height: "))
 
 while n < 1 or n > 8:
