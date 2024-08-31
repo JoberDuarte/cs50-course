@@ -10,6 +10,7 @@ def get_height():
         except ValueError:
             print("Invalid input. Please enter an integer.")
 
+
 def print_pyramid(height):
     # I got help from the duck to improve the structure of this part of the code
     for i in range(1, height + 1):
@@ -17,6 +18,7 @@ def print_pyramid(height):
         print(" " * (height - i) + "#" * i, end="  ")
         # Print hashes for the right side
         print("#" * i)
+
 
 height = get_height()
 
