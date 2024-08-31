@@ -1,7 +1,9 @@
 
 
 n = int(input("Height: "))
-while n < 1 and n > 8:
+
+
+while n < 1 or n > 8:
     n = int(input("Height: "))
 
 
