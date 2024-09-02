@@ -1,13 +1,16 @@
 text = input("TEXT: ")
 
+
 def count_letters(text):
     return sum(1 for n in text if n.isalpha())
+
 
 def count_words(text):
     return len(text.split())
 
+
 def count_sentences(text):
-    return sum(1 for n in text if n in[".", "!", "?"])
+    return sum(1 for n in text if n in [".", "!", "?"])
 
 
 letter = count_letters(text)
@@ -27,4 +30,3 @@ elif rounded_result >= 16:
     print("Grade 16+")
 else:
     print(f"Grade {rounded_result}")
-
