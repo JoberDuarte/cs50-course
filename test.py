@@ -25,7 +25,7 @@ def credit_card(number):
     if len(number) == 15 and number[0] == "3"  and number[1] in ["4", "7"]:
         print("AMEX")
     elif len(number) == 15 and number[0] == "5" and number[1] in ["1", "2", "3", "4", "5"]:
-        print(MASTERCARD)
+        print("MASTERCARD")
     elif (len(number) == 13 or len(number) == 16) and number[0] == "4":
         print("VISA")
 
