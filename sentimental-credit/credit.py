@@ -58,6 +58,3 @@ elif len(card_number) % 2 != 0:
        credit_card(card_number)
     else:
        print("INVALID")
-
-print(separeted_digits)
-print(total)
