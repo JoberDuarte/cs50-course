@@ -22,6 +22,8 @@ def multiply_list(multiply_list):
     return separeted_digits
 
 
+
+
 list_1, list_2 = split_list(card_number)
 
 
