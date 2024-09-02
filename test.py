@@ -21,7 +21,10 @@ def multiply_list(multiply_list):
 
     return separeted_digits
 
-
+def credit_card(number):
+    if len(number) == 15 and number[0] == 3  and number[1] == 4 or 7
+        print("AMEX")
+    elif len(number) == 15 and number[0] == 5 and number[1] == 1 or 2 or 3 or 4 or 5
 
 
 list_1, list_2 = split_list(card_number)
