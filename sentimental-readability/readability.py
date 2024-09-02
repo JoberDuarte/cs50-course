@@ -16,6 +16,6 @@ sentences = count_sentences(text)
 l = letter / words * 100
 s = sentences / words * 100
 
-result = 
+result = (0.0588 * l) - (0.296 * s) - 15.8
 
 
