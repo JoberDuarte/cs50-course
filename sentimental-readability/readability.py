@@ -17,5 +17,13 @@ l = float(letter) / words * 100
 s = float(sentences) / words * 100
 
 result = (0.0588 * l) - (0.296 * s) - 15.8
+rounded_result = round(result)
 
+
+if rounded_result < 1:
+    print("Before Grade 1")
+elif rounded_result >= 16:
+    print("Grade 16+")
+else:
+    print(f"Grade {rounded_result}")
 
