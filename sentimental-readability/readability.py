@@ -1,14 +1,20 @@
 text = input("TEXT: ")
 
 def count_letters(text):
-    letters = sum(1 for n in text if n.isalpha())
-    print(f"{letters}")
+    sum(1 for n in text if n.isalpha())
 
-count_letters(text)
+def count_words(text):
+    len(text.split())
 
-words = len(text.split())
+def count_sentences(text):
+    sum(1 for n in text if n in[".", "!", "?"])
 
-print(f"{words}")
+letter = count_letters(text)
+word = count_words(text)
+sentences = count_sentences(text)
+
+
+
 
 
 
