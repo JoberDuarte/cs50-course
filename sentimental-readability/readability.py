@@ -1,16 +1,14 @@
 text = input("TEXT: ")
 
 def count_letters(text):
-    sum(1 for n in text if n.isalpha())
-    return
+    return sum(1 for n in text if n.isalpha())
 
 def count_words(text):
-    len(text.split())
-    return
+    return len(text.split())
 
 def count_sentences(text):
-    sum(1 for n in text if n in[".", "!", "?"])
-    return
+    return sum(1 for n in text if n in[".", "!", "?"])
+
 
 letter = count_letters(text)
 words = count_words(text)
