@@ -13,7 +13,7 @@ def count_sentences(text):
     return
 
 letter = count_letters(text)
-word = count_words(text)
+words = count_words(text)
 sentences = count_sentences(text)
 
 l = float(letter) / words * 100
