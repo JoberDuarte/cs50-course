@@ -32,7 +32,6 @@ def credit_card(number):
         print("INVALID")
 
 
-
 list_1, list_2 = split_list(card_number)
 
 
@@ -40,21 +39,15 @@ if len(card_number) % 2 == 0:
    separeted_digits = multiply_list(list_1)
    sum_list_1 = sum(separeted_digits)
    sum_list_2 = sum(list_2)
-   total = sum_list_1 + sum_list_2
-
-   if total % 10 == 0:
-       credit_card(card_number)
-   else:
-       print("INVALID")
-
 
 elif len(card_number) % 2 != 0:
     separeted_digits = multiply_list(list_2)
     sum_list_2 = sum(separeted_digits)
     sum_list_1 = sum(list_1)
-    total = sum_list_1 + sum_list_2
 
-    if total % 10 == 0:
-       credit_card(card_number)
-    else:
-       print("INVALID")
+total = sum_list_1 + sum_list_2
+
+if total % 10 == 0:
+    credit_card(card_number)
+else:
+    print("INVALID")
