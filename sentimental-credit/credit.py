@@ -41,7 +41,7 @@ if len(card_number) % 2 == 0:
    if total % 10 == 0:
        credit_card(card_number)
    else:
-       print("Invalid")
+       print("INVALID")
 
 
 elif len(card_number) % 2 != 0:
@@ -53,4 +53,4 @@ elif len(card_number) % 2 != 0:
     if total % 10 == 0:
        credit_card(card_number)
     else:
-       print("Invalid")
+       print("INVALID")
