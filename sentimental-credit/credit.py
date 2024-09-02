@@ -56,3 +56,4 @@ elif len(card_number) % 2 != 0:
        print("INVALID")
 
 print(separeted_digits)
+print(total)
