@@ -28,6 +28,8 @@ def credit_card(number):
         print("MASTERCARD")
     elif (len(number) == 13 or len(number) == 16) and number[0] == "4":
         print("VISA")
+    else:
+        print("INVALID")
 
 
 
