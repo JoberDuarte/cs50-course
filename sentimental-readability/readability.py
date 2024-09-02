@@ -1,4 +1,5 @@
 text = input("TEXT: ")
 
-def count_letters(text)
+def count_letters(text):
     
+
