@@ -24,8 +24,8 @@ def main():
     # TODO: Read DNA sequence file into a variable
     with open(argv[2], 'r') as file_txt:
         text = file_txt.read()
-        print(text)
-    print(row)
+
+
 
 
     # TODO: Find longest match of each STR in DNA sequence
@@ -33,7 +33,7 @@ def main():
     for i in reader.fieldnames:
         longest_match(text, i)
         save_str.append(longest_match(text, i))
-    print(save_str)
+    
 
 
     # TODO: Check database for matching profiles
