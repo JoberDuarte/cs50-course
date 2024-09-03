@@ -20,7 +20,6 @@ def main():
         print(f"Could not open {argv[1]}")
         exit(2)
 
-
     # TODO: Read DNA sequence file into a variable
     with open(argv[2], 'r') as file_txt:
         text = file_txt.read()
@@ -33,24 +32,24 @@ def main():
 
     # TODO: Check database for matching profiles
     match_found = False
-    for row  in rows:
+    for row in rows:
         if (int(row['AGATC']) == save_str[1] and
             int(row['AATG']) == save_str[2] and
-            int(row['TATC']) == save_str[3]):
+                int(row['TATC']) == save_str[3]):
             print(row["name"])
             match_found = True
             break
         elif 'TTTTTTCT' in row and (int(row['AGATC']) == save_str[1] and
-              int(row['TTTTTTCT']) == save_str[2] and
-              int(row['AATG']) == save_str[3] and
-              int(row['TCTAG']) == save_str[4] and
-              int(row['GATA']) == save_str[5] and
-              int(row['TATC']) == save_str[6] and
-              int(row['GAAA']) == save_str[7] and
-              int(row['TCTG']) == save_str[8]):
-             print(row["name"])
-             match_found = True
-             break
+                                    int(row['TTTTTTCT']) == save_str[2] and
+                                    int(row['AATG']) == save_str[3] and
+                                    int(row['TCTAG']) == save_str[4] and
+                                    int(row['GATA']) == save_str[5] and
+                                    int(row['TATC']) == save_str[6] and
+                                    int(row['GAAA']) == save_str[7] and
+                                    int(row['TCTG']) == save_str[8]):
+            print(row["name"])
+            match_found = True
+            break
     if not match_found:
         print("No match")
 
