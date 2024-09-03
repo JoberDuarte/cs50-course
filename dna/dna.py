@@ -6,7 +6,7 @@ def main():
 
     # TODO: Check for command-line usage
     if len(argv) != 3:
-        print("Usah")
+        print("Usage: name.py name.csv name.txt")
 
     # TODO: Read database file into a variable
 
