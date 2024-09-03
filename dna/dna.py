@@ -33,10 +33,10 @@ def main():
 
 
     # TODO: Check database for matching profiles
-    for i in range(len(rows)):
-        if rows[i][1:] == save_str[1:]:
-            print(row['name'][i])
-            
+    for row  in rows:
+        if row[1:4] == save_str[1:4]:
+            print(row[0])
+
     return
 
 
