@@ -51,8 +51,7 @@ def main():
               int(row['GAAA']) == save_str[7] and
               int(row['TCTG']) == save_str[8]):
              print(row["name"])
-        else:
-            print("Not Match")
+     print("Not Match")
 
     return
 
