@@ -37,11 +37,14 @@ def main():
 
 
     # TODO: Check database for matching profiles
+    match_found = False
     for row  in rows:
         if (int(row['AGATC']) == save_str[1] and
             int(row['AATG']) == save_str[2] and
             int(row['TATC']) == save_str[3]):
             print(row["name"])
+            match_found = False
+            break
         elif (int(row['AGATC']) == save_str[1] and
               int(row['TTTTTTCT']) == save_str[2] and
               int(row['AATG']) == save_str[3] and
@@ -51,8 +54,10 @@ def main():
               int(row['GAAA']) == save_str[7] and
               int(row['TCTG']) == save_str[8]):
              print(row["name"])
-        else:
-            print("Not match")
+             match_found = False
+             break
+    if not match_found:
+        print("Not match")
 
     return
 
