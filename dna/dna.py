@@ -24,8 +24,11 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
+    save_str = []
     for i in reader.fieldnames:
         longest_match(text, i)
+        save_str.append(longest_match(text, i))
+    print(save_str)
 
 
     # TODO: Check database for matching profiles
@@ -66,7 +69,7 @@ def longest_match(sequence, subsequence):
 
         # Update most consecutive matches found
         longest_run = max(longest_run, count)
-        
+
 
 
     # After checking for runs at each character in seqeuence, return longest run found
