@@ -33,7 +33,7 @@ def main():
     for i in reader.fieldnames:
         longest_match(text, i)
         save_str.append(longest_match(text, i))
-    
+
 
 
     # TODO: Check database for matching profiles
@@ -42,6 +42,17 @@ def main():
             int(row['AATG']) == save_str[2] and
             int(row['TATC']) == save_str[3]):
             print(row["name"])
+        elif (int(row['AGATC']) == save_str[1] and
+              int(row['TTTTTTCT']) == save_str[2] and
+              int(row['AATG']) == save_str[3] and
+              int(row['TCTAG']) == save_str[4] and
+              int(row['GATA']) == save_str[5] and
+              int(row['TATC']) == save_str[6] and
+              int(row['GAAA']) == save_str[7] and
+              int(row['TCTG']) == save_str[8]):
+             print(row["name"])
+        else:
+            print("Not Match")
 
     return
 
