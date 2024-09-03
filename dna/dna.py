@@ -14,7 +14,7 @@ def main():
          reader = csv.DictReader(file)
          for row in reader:
              rows.append(row)
-    print(reader.fieldnames[1])
+    print(reader.fieldnames)
 
 
     # TODO: Read DNA sequence file into a variable
@@ -24,7 +24,8 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
-    for i in range(1, len(reader.fieldnames))
+    for i in reader.fieldnames:
+        
 
     # TODO: Check database for matching profiles
 
