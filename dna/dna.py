@@ -28,7 +28,7 @@ def main():
     for i in reader.fieldnames:
         longest_match(text, i)
         save_str.append(longest_match(text, i))
-        print(save_str)
+    print(save_str)
 
 
     # TODO: Check database for matching profiles
