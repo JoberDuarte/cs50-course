@@ -29,10 +29,11 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
-    save_str = []
+    save_str = {}
     for i in reader.fieldnames:
         longest_match(text, i)
         save_str.append(longest_match(text, i))
+    print(save_str)
 
 
 
