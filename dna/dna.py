@@ -32,6 +32,9 @@ def main():
 
 
     # TODO: Check database for matching profiles
+    for i in rows:
+        if rows[i] == save_str
+        print(row.name[i])
 
 
     return
