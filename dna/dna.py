@@ -32,7 +32,8 @@ def main():
 
 
     # TODO: Check database for matching profiles
-        if rows[row][1:] == save_str[1:]:
+    for i in range(len(rows)):
+        if rows[i][1:] == save_str[1:]:
             print(row['name'][i])
 
 
