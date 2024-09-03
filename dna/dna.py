@@ -1,5 +1,5 @@
 import csv
-from sys import argv
+from sys import argv, exit
 
 
 def main():
@@ -7,6 +7,7 @@ def main():
     # TODO: Check for command-line usage
     if len(argv) != 3:
         print("Usage: name.py name.csv name.txt")
+        exit(1)
 
     # TODO: Read database file into a variable
     rows = []
