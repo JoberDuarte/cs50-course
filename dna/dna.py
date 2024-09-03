@@ -38,8 +38,10 @@ def main():
 
     # TODO: Check database for matching profiles
     for row  in rows:
-        if row[1:4] == save_str[1:4]:
-            print(row[0])
+        if (int(row['AGATC']) == save_str[1] and
+            int(row['AATG']) == save_str[2] and
+            int(row['TATC']) == save_str[3]):
+            print(row["name"])
 
     return
 
