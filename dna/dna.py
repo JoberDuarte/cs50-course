@@ -12,8 +12,9 @@ def main():
     # TODO: Read database file into a variable
     rows = []
     with open(argv[1]) as file:
-         reader = csv.reader(file)
-         for row in reader:
+         #reader = csv.DictReader(file)
+
+         for row in csv.reader(file):
              rows.append(row)
     print(rows)
 
