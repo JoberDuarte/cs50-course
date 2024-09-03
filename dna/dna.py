@@ -36,8 +36,7 @@ def main():
     for i in range(len(rows)):
         if rows[i][1:] == save_str[1:]:
             print(row['name'][i])
-
-
+            
     return
 
 
