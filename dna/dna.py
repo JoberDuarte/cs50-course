@@ -10,12 +10,14 @@ def main():
         exit(1)
 
     # TODO: Read database file into a variable
-    rows = []
-    with open(argv[1]) as file:
-         reader = csv.DictReader(file)
-         for row in reader:
-             rows.append(row)
-    print(rows)
+    try:
+        with open(argv[1]) as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                rows.append(row)
+    except FileNotFoundError:
+        print(f"Could not open {argv[1]}")
+        exit(2)
 
 
     # TODO: Read DNA sequence file into a variable
