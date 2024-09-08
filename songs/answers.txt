@@ -1,5 +1,6 @@
-1
+1I think the average values of danceability, energy,and valence are calculated, and if the final average value is above 0.5,
+it characterizes a happy, joyful, vibrant aura. If it is below 0.5, it would be the opposit more sad, reserved, and introspective.
 
 
 
-2 - 
+2 -
