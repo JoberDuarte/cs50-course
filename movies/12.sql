@@ -10,4 +10,6 @@ WHERE movies.id IN
         FROM people
         WHERE name IN ('Bradley Cooper', 'Jennifer Lawrence')
     )
+    GROUP BY movie_id
+    HAVING COUNT(DISTINCT person_id) = 2
 );
