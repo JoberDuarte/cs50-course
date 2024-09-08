@@ -1,5 +1,5 @@
-SELECT movies.title, rating.ratings
-FROM movies, ratings
-JOIN movies ON movies.id = ratings.movie_id
-WHERE year = 2012;
+SELECT movies.title, ratings.rating
+FROM movies
+JOIN ratings ON movies.id = ratings.movie_id
+WHERE movies.year = 2010;
 
