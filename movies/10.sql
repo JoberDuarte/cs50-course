@@ -1,10 +1,10 @@
 SELECT DISTINCT name
 FROM people
-WHERE id IN =
+WHERE id IN
 (
     SELECT person_id
     FROM directors
-    WHERE movie_id IN =
+    WHERE movie_id IN 
     (
         SELECT movie_id
         FROM ratings
