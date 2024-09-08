@@ -11,4 +11,4 @@ WHERE id IN
         WHERE year = 2004
     )
 )
-ORDER BY people.birth ASC;
+ORDER BY people.birth DESC;
