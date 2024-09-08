@@ -1,4 +1,4 @@
-SELECT DISTINCT name, birth
+SELECT DISTINCT name
 FROM people
 WHERE id IN
 (
@@ -11,4 +11,4 @@ WHERE id IN
         WHERE year = 2004
     )
 )
-ORDER BY people.birth;
+ORDER BY birth;
