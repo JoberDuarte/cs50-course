@@ -1,4 +1,4 @@
-SELECT DISTINCT people.name
+SELECT DISTINCT name
 FROM people
 WHERE id IN
 (
