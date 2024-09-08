@@ -21,4 +21,5 @@ WHERE people.id IN
             )
         )
     )
-);
+)
+AND name != 'Kevin Bacon';
