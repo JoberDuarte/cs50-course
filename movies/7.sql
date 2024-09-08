@@ -2,6 +2,4 @@ SELECT movies.title, ratings.rating
 FROM movies
 JOIN ratings ON movies.id = ratings.movie_id
 WHERE movies.year = 2010
-ORDER BY rating DESC
-ORDER BY title ASC;
-
+ORDER BY ratings.rating DESC, movies.title ASC;
