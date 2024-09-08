@@ -1,4 +1,4 @@
-SELECT title
+SELECT DISTINCT title
 FROM movies
 WHERE movies.id IN
 (
@@ -8,6 +8,7 @@ WHERE movies.id IN
     (
         SELECT id
         FROM people
-        WHERE name IN ('Bradley Cooper', 'Jennifer Lawrence')
+        WHERE name = 'Bradley Cooper'
+        OR name = 'Jennifer Lawrence'
     )
 );
