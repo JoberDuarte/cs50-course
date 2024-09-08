@@ -1,4 +1,4 @@
-SELECT DISTINCT name
+SELECT DISTINCT name, birth
 FROM people
 WHERE id IN
 (
