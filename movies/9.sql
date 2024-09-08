@@ -1,4 +1,4 @@
-SELECT DISTINCT name
+SELECT DISTINCT TRIM(name) AS name
 FROM people
 WHERE id IN
 (
@@ -11,4 +11,4 @@ WHERE id IN
         WHERE year = 2004
     )
 )
-ORDER BY birth ASC, name ASC;
+ORDER BY birth ASC;
