@@ -30,7 +30,7 @@ SELECT * FROM people
 WHERE license_plate IN
 (
     SELECT license_plate
-    FROM bakery_security_logs
+    FROM bakery_security_logsSELE
     WHERE year = 2023
     AND month = 7
     AND day = 28
