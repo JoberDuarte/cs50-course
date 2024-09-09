@@ -37,8 +37,8 @@ WHERE license_plate IN
 );
 
 
-SELECT name
+SELECT *
 FROM people
 WHERE phone_number IN(
-    
+
 )
