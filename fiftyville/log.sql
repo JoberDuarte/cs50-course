@@ -39,6 +39,6 @@ WHERE license_plate IN
 
 SELECT *
 FROM people
-WHERE phone_number IN(
+WHERE license_plate IN(
 
 )
