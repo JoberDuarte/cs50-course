@@ -55,7 +55,6 @@ WHERE license_plate IN
         WHERE year = 2023
         AND month = 7
         AND day = 28
-        AND hour = 10
         AND duration < 60
 
    );
