@@ -69,7 +69,7 @@ SELECT *
 FROM people
 WHERE phone_number IN
 (
-        SELECT *
+        SELECT receiver
         FROM phone_calls
         WHERE year = 2023
         AND month = 7
