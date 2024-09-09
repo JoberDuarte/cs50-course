@@ -65,4 +65,4 @@ WHERE license_plate IN
     )
     );
 
-SELECT * FROM people;
+SELECT * FROM people
