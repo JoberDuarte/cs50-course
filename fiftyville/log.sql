@@ -65,3 +65,4 @@ WHERE license_plate IN
     )
     );
 
+SELECT * FROM phone_calls LIMIT 10;
