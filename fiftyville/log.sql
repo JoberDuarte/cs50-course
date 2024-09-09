@@ -81,7 +81,8 @@ WHERE phone_number IN
     OR caller = '(367) 555-5533')
 );
 
--- verifica os pares
+-- verifica os pares Bruce/Robin(NULL)
+-- Taylor/James  Diana/Philip
 
 SELECT *
 FROM phone_calls
