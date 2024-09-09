@@ -47,7 +47,8 @@ WHERE license_plate IN
     AND day = 28
     AND hour = 10
     AND minute BETWEEN 16 AND 35
-    WHERE phone_number IN
+)
+AND phone_number IN
     (
         SELECT caller
         FROM phone_calls
@@ -57,7 +58,6 @@ WHERE license_plate IN
         AND hour = 10
         AND duration < 60
 
-    )
-);
+   );
 
 
