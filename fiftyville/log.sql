@@ -59,4 +59,4 @@ AND transaction_type = 'withdraw';
 
 
 
-SELECT *
+SELECT * people
