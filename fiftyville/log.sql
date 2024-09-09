@@ -23,7 +23,7 @@ AND month = 7
 AND day = 28;
 
 
-
+-- Selecionando os dados de todas as pessoas que deixaram a padaria ate 20 minutos depois do roubo
 SELECT * FROM people
 WHERE license_plate IN
 (
