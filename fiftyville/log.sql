@@ -24,3 +24,5 @@ AND day = 28;
 
 
 
+SELECT * FROM people
+WHERE license_plate = '1106N58';
