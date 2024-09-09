@@ -95,6 +95,7 @@ OR caller = '(770) 555-1861'
 OR caller = '(367) 555-5533');
 
 SELECT *
-FROM passengers
+FROM passengers, flights
 WHERE passport_number = 2438825627
 OR passport_number = 3391710505
+JOIN flights ON flights.id = passengers.flight_id;
