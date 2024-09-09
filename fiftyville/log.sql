@@ -48,7 +48,7 @@ WHERE license_plate IN
     AND hour = 10
     AND minute BETWEEN 16 AND 35
 )
-AND phone_number IN
+    AND phone_number IN
     (
         SELECT caller
         FROM phone_calls
