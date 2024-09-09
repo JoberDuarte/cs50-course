@@ -35,3 +35,10 @@ WHERE license_plate IN
     AND hour = 10
     AND minute BETWEEN 16 AND 35
 );
+
+
+SELECT name
+FROM people
+WHERE phone_number IN(
+    
+)
