@@ -1,12 +1,11 @@
 SELECT *
-        FROM phone_calls
-        WHERE year = 2023
-        AND month = 7
-        AND day = 28
-        AND duration < 60
-        AND (caller = '(286) 555-6063'
-        OR caller = '(770) 555-1861'
-        OR caller = '(367) 555-5533');
+FROM passengers
+JOIN flights ON flights.id = passengers.flight_id
+WHERE (passport_number = 1988161715
+OR passport_number = 3592750733
+OR passport_number = 5773159633)
+AND origin_airport_id = 8;
+
 
 
 
