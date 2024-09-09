@@ -99,5 +99,5 @@ FROM passengers
 JOIN flights ON flights.id = passengers.flight_id
 WHERE (passport_number = 2438825627
 OR passport_number = 3391710505
-OR passport_number = NULL);
+OR passport_number IS NULL);
 
