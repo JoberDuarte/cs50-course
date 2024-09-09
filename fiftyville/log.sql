@@ -24,18 +24,7 @@ AND day = 28;
 
 
 -- Selecionando os dados de todas as pessoas que deixaram a padaria ate 20 minutos depois do roubo
-SELECT * FROM people
-WHERE license_plate IN
-(
-    SELECT license_plate
-    FROM bakery_security_logs
-    WHERE year = 2023
-    AND month = 7
-    AND day = 28
-    AND hour = 10
-    AND minute BETWEEN 16 AND 35
-);
-
+-- e fizeram uma ligacao com duracao de menos de 1 minuto
 
 SELECT * FROM people
 WHERE license_plate IN
