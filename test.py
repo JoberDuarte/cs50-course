@@ -10,6 +10,10 @@ OR passport_number = 3592750733)
 AND origin_airport_id = 8;
 
 
-
-
+SELECT * FROM flights
+WHERE origin_airport_id = 8
+AND year = 2023
+AND month = 7
+AND day = 29
+ORDER BY hour;
 
