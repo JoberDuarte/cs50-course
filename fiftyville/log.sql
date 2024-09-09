@@ -47,7 +47,17 @@ WHERE license_plate IN
     AND day = 28
     AND hour = 10
     AND minute BETWEEN 16 AND 35
-    WHERE
+    WHERE phone_number IN
+    (
+        SELECT caller
+        FROM phone_calls
+        WHERE year = 2023
+        AND month = 7
+        AND day = 28
+        AND hour = 10
+        AND duration < 60
+
+    )
 );
 
 
