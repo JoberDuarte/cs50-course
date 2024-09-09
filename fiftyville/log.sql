@@ -40,7 +40,7 @@ WHERE license_plate IN
 SELECT * FROM people
 WHERE license_plate IN
 (
-    SELECT license_plate
+    SELECT phone_number
     FROM bakery_security_logs
     WHERE year = 2023
     AND month = 7
