@@ -25,6 +25,7 @@ AND day = 28;
 
 -- Selecionando os dados de todas as pessoas que deixaram a padaria ate 20 minutos depois do roubo
 -- e fizeram uma ligacao com duracao de menos de 1 minuto
+-- e fizeram levantamento na rua Legget
 
 SELECT * FROM people
 WHERE license_plate IN
@@ -46,14 +47,9 @@ WHERE license_plate IN
         AND day = 28
         AND duration < 60
 
-   );
-
-
--- Verifica as pessoas que fizeram levantamento de dinheiro
-SELECT *
-FROM people
-WHERE id IN
-(
+    )
+    AND id IN
+    (
     SELECT person_id
     FROM bank_accounts
     WHERE account_number IN
@@ -67,5 +63,5 @@ WHERE id IN
         AND transaction_type = 'withdraw'
 
     )
-);
+    );
 
