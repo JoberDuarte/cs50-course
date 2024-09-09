@@ -76,6 +76,6 @@ WHERE phone_number IN
         AND day = 28
         AND duration < 60
         AND caller = '(286) 555-6063'
-        AND caller = '(770) 555-1861'
-        AND caller = '(367) 555-5533'
+        OR caller = '(770) 555-1861'
+        OR caller = '(367) 555-5533'
 );
