@@ -96,7 +96,7 @@ OR caller = '(770) 555-1861'
 OR caller = '(367) 555-5533');
 
 
--- Verifica o passaporte de todos 
+-- Verifica os voos em que se tem registro do passaporte de todos os suspeitos
 
 SELECT *
 FROM passengers
@@ -105,7 +105,8 @@ WHERE (passport_number = 1988161715
 OR passport_number = 3592750733
 OR passport_number = 5773159633
 OR passport_number = 2438825627
-OR passport_number = 3592750733)
+OR passport_number = 3592750733
+OR passport_number IS NULL)
 
 AND origin_airport_id = 8;
 
