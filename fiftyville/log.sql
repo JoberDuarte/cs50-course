@@ -25,4 +25,5 @@ AND day = 28;
 
 
 SELECT * FROM people
-WHERE license_plate = ('1106N58', '0NTHK55');
+WHERE license_plate = '1106N58'
+OR license_plate = '0NTHK55';
