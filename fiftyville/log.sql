@@ -83,6 +83,7 @@ WHERE phone_number IN
 
 -- verifica os pares Bruce/Robin(NULL)
 -- Taylor/James  Diana/Philip
+-- Checa o numero de passaporte
 
 SELECT *
 FROM phone_calls
@@ -94,10 +95,14 @@ AND (caller = '(286) 555-6063'
 OR caller = '(770) 555-1861'
 OR caller = '(367) 555-5533');
 
+
+-- Verifica os cumplices os voos que os cumpl
+
 SELECT *
 FROM passengers
 JOIN flights ON flights.id = passengers.flight_id
 WHERE (passport_number = 2438825627
 OR passport_number = 3391710505
-OR passport_number IS NULL);
+OR passport_number IS NULL)
+AND origin_airport_id = 8;
 
