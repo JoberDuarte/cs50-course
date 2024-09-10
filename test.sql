@@ -1,6 +1,6 @@
 -- Selecionando os dados de todas as pessoas que deixaram a padaria ate 20 minutos depois do roubo
 -- e fizeram uma ligacao com duracao de menos de 1 minuto
--- e fizeram levantamento no 
+-- e fizeram levantamento no caixa eletronico
 
 SELECT people.*, phone_calls.*,atm_transactions.* FROM people
 JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate
@@ -18,6 +18,11 @@ AND atm_transactions.month = 7
 AND atm_transactions.day = 28
 AND atm_transactions.atm_location = 'Leggett Street'
 AND atm_transactions.transaction_type = 'withdraw';
+
+
+SELECT * people
+JOIN phone_calls ON phone_calls.receiver = people.phone_number
+WHERE receiver = 
 
 
 
