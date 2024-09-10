@@ -15,101 +15,48 @@ AND month = 7
 AND day = 28;
 
 
--- Verificar quem saiu da padaria entre 10 e 11
-SELECT * FROM people
-JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate
-WHERE year = 2023
-AND month = 7
-AND day = 28
-AND hour = 10
-AND activity = 'exit';
-
-
-
 -- Selecionando os dados de todas as pessoas que deixaram a padaria ate 20 minutos depois do roubo
 -- e fizeram uma ligacao com duracao de menos de 1 minuto
--- e fizeram levantamento na rua Legget
+-- e fizeram levantamento no caixa eletronico
 
+SELECT people.*, phone_calls.*,atm_transactions.* FROM people
+JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate
+JOIN phone_calls ON phone_calls.caller = people.phone_number
+JOIN bank_accounts ON bank_accounts.person_id = people.id
+JOIN atm_transactions ON atm_transactions.account_number = bank_accounts.account_number
+WHERE bakery_security_logs.year = 2023
+AND bakery_security_logs.month = 7
+AND bakery_security_logs.day = 28
+AND bakery_security_logs.hour = 10
+AND bakery_security_logs.activity = 'exit'
+AND phone_calls.duration < 60
+AND atm_transactions.year = 2023
+AND atm_transactions.month = 7
+AND atm_transactions.day = 28
+AND atm_transactions.atm_location = 'Leggett Street'
+AND atm_transactions.transaction_type = 'withdraw';
+
+
+--verificar as pessoas que receberam as ligacoes e fazer os match  BRUCE - ROBIN // BRUCE - CHARLOTTE // DIANA - PHILIP // TAYLOR - JAMES
 SELECT * FROM people
-WHERE license_plate IN
-(
-    SELECT license_plate
-    FROM bakery_security_logs
-    WHERE year = 2023
-    AND month = 7
-    AND day = 28
-    AND hour = 10
-    AND minute BETWEEN 16 AND 35
-)
-    AND phone_number IN
-    (
-        SELECT caller
-        FROM phone_calls
-        WHERE year = 2023
-        AND month = 7
-        AND day = 28
-        AND duration < 60
-
-    )
-    AND id IN
-    (
-    SELECT person_id
-    FROM bank_accounts
-    WHERE account_number IN
-    (
-        SELECT account_number
-        FROM atm_transactions
-        WHERE year = 2023
-        AND month = 7
-        AND day = 28
-        AND atm_location = 'Leggett Street'
-        AND transaction_type = 'withdraw'
-
-    )
-    );
-
--- verifica as pessoas que receberam as ligacoes das pessoas que atendem os criterios acima
-SELECT *
-FROM people
-WHERE phone_number IN
-(
-    SELECT receiver
-    FROM phone_calls
-    WHERE year = 2023
-    AND month = 7
-    AND day = 28
-    AND duration < 60
-    AND (caller = '(286) 555-6063'
-    OR caller = '(770) 555-1861'
-    OR caller = '(367) 555-5533')
-);
-
--- verifica os pares Bruce/Robin(NULL)
--- Taylor/James  Diana/Philip
--- Checa o numero de passaporte
-
-SELECT *
-FROM phone_calls
-WHERE year = 2023
-AND month = 7
-AND day = 28
-AND duration < 60
-AND (caller = '(286) 555-6063'
-OR caller = '(770) 555-1861'
-OR caller = '(367) 555-5533');
+WHERE phone_number = '(375) 555-8161'
+OR phone_number = '(455) 555-5315'
+OR phone_number = '(725) 555-3243'
+OR phone_number = '(676) 555-6554';
 
 
--- Verifica os voos em que se tem registro do passaporte de todos os suspeitos
-
-SELECT *
-FROM passengers
+--Verifica os voos que sairam de Fiftyville em que os suspeitos estavam
+SELECT * FROM people
+JOIN passengers ON passengers.passport_number = people.passport_number
 JOIN flights ON flights.id = passengers.flight_id
-WHERE (passport_number = 1988161715
-OR passport_number = 3592750733
-OR passport_number = 5773159633
-OR passport_number = 2438825627
-OR passport_number = 3592750733
-OR passport_number IS NULL)
-
-AND origin_airport_id = 8;
-
+WHERE (passengers.passport_number = 5773159633
+OR passengers.passport_number = 3592750733
+OR passengers.passport_number = 1988161715
+OR passengers.passport_number = 2438825627
+OR passengers.passport_number = 7226911797
+OR passengers.passport_number = 3391710505
+OR passengers.passport_number IS NULL)
+AND flights.origin_airport_id = 8
+AND flights.year = 2023
+AND flights.month = 7
+AND flights.day > 28;
