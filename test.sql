@@ -45,4 +45,5 @@ AND flights.month = 7
 AND flights.day > 28;
 
 
-SELECT * FROM 
+SELECT * FROM passengers
+WHERE passport_number IS NULL;
