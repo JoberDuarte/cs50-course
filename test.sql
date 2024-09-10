@@ -1,5 +1,6 @@
 -- Selecionando os dados de todas as pessoas que deixaram a padaria ate 20 minutos depois do roubo
 -- e fizeram uma ligacao com duracao de menos de 1 minuto
+-- e fizeram levantamento no 
 
 SELECT people.*, phone_calls.*,atm_transactions.* FROM people
 JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate
