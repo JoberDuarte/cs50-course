@@ -1,6 +1,6 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
 
--- Saber a descricao da cena do crime
+-- Know the description of the crime scene
 SELECT description
 FROM crime_scene_reports
 WHERE year = 2023
@@ -8,16 +8,16 @@ AND month = 7
 AND day = 28
 AND street = 'Humphrey Street';
 
--- Verificar o depoimento das pessoas que estavam na cena do crime
+-- Verify the testimony of the people who were at the crime scene
 SELECT * FROM interviews
 WHERE year = 2023
 AND month = 7
 AND day = 28;
 
 
--- Selecionando os dados de todas as pessoas que deixaram a padaria ate 20 minutos depois do roubo
--- e fizeram uma ligacao com duracao de menos de 1 minuto
--- e fizeram levantamento no caixa eletronico
+-- Selecting data for all people who left the bakery within 20 minutes after the theft
+-- and made a call lasting less than 1 minute
+-- and made a withdrawal at the ATM
 
 SELECT people.*, phone_calls.*,atm_transactions.* FROM people
 JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate
@@ -38,15 +38,20 @@ AND atm_transactions.atm_location = 'Leggett Street'
 AND atm_transactions.transaction_type = 'withdraw';
 
 
---verificar as pessoas que receberam as ligacoes e fazer os match  BRUCE - ROBIN // BRUCE - CHARLOTTE // DIANA - PHILIP // TAYLOR - JAMES
+-- Check the people who received the calls and make the matches:
+-- BRUCE - ROBIN
+-- BRUCE - CHARLOTTE
+-- DIANA - PHILI
+
 SELECT * FROM people
 WHERE phone_number = '(375) 555-8161'
 OR phone_number = '(455) 555-5315'
 OR phone_number = '(725) 555-3243';
 
 
---Verifica os voos que sairam de Fiftyville no dia 29 antes das 12am em que os suspeitos estavam
--- Encontra o culpado
+-- Check the flights that left Fiftyville on the 29th before 12 AM where the suspects were
+-- Find the Thief
+
 SELECT * FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
 JOIN flights ON flights.id = passengers.flight_id
