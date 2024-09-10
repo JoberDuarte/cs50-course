@@ -28,6 +28,7 @@ WHERE bakery_security_logs.year = 2023
 AND bakery_security_logs.month = 7
 AND bakery_security_logs.day = 28
 AND bakery_security_logs.hour = 10
+AND bakery_security_logs.minute < 26
 AND bakery_security_logs.activity = 'exit'
 AND phone_calls.duration < 60
 AND atm_transactions.year = 2023
@@ -41,22 +42,20 @@ AND atm_transactions.transaction_type = 'withdraw';
 SELECT * FROM people
 WHERE phone_number = '(375) 555-8161'
 OR phone_number = '(455) 555-5315'
-OR phone_number = '(725) 555-3243'
-OR phone_number = '(676) 555-6554';
+OR phone_number = '(725) 555-3243';
 
 
---Verifica os voos que sairam de Fiftyville em que os suspeitos estavam
+--Verifica os voos que sairam de Fiftyville no dia 29 antes das 12am em que os suspeitos estavam
 SELECT * FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
 JOIN flights ON flights.id = passengers.flight_id
 WHERE (passengers.passport_number = 5773159633
 OR passengers.passport_number = 3592750733
-OR passengers.passport_number = 1988161715
-OR passengers.passport_number = 2438825627
 OR passengers.passport_number = 7226911797
 OR passengers.passport_number = 3391710505
 OR passengers.passport_number IS NULL)
 AND flights.origin_airport_id = 8
 AND flights.year = 2023
 AND flights.month = 7
-AND flights.day = 29;
+AND flights.day = 29
+AND flights.hour < 12;
