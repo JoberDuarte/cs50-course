@@ -12,7 +12,7 @@ AND bakery_security_logs.day = 28
 AND bakery_security_logs.hour = 10
 AND bakery_security_logs.activity = 'exit'
 AND phone_calls.duration < 60
-AND atm_transactions.location = 'Leggett Street'
+AND atm_transactions.atm_location = 'Leggett Street'
 AND atm_transactions.transaction_type = 'withdraw';
 
 
