@@ -49,8 +49,8 @@ OR phone_number = '(725) 555-3243';
 SELECT * FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
 JOIN flights ON flights.id = passengers.flight_id
-JOIN airports ON airports.id = flights.origin_airport_id
-JOIN airports ON airports.id = flights.destination_airport_id
+JOIN airports AS origin_airport ON origin_airport.id = flights.origin_airport_id
+JOIN airports AS destination_airport ON destination_airport.id = flights.destination_airport_id
 WHERE (passengers.passport_number = 5773159633
 OR passengers.passport_number = 3592750733
 OR passengers.passport_number = 7226911797
