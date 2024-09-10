@@ -8,19 +8,22 @@ AND month = 7
 AND day = 28
 AND street = 'Humphrey Street';
 
-
--- Verificar as atividades das pessoas entre as 10 e 11 na padaria
-SELECT * FROM bakery_security_logs
-WHERE year = 2023
-AND month = 7
-AND day = 28
-AND hour = 10;
-
 -- Verificar o depoimento das pessoas que estavam na cena do crime
 SELECT * FROM interviews
 WHERE year = 2023
 AND month = 7
 AND day = 28;
+
+
+-- Verificar quem saiu da padaria entre 10 e 11
+SELECT * FROM people
+JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate
+WHERE year = 2023
+AND month = 7
+AND day = 28
+AND hour = 10
+AND activity = 'exit';
+
 
 
 -- Selecionando os dados de todas as pessoas que deixaram a padaria ate 20 minutos depois do roubo
