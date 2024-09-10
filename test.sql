@@ -20,6 +20,7 @@ AND atm_transactions.atm_location = 'Leggett Street'
 AND atm_transactions.transaction_type = 'withdraw';
 
 
+--verificar as pessoas que receberam as ligacoes e fazer os match
 SELECT * FROM people
 WHERE phone_number = '(375) 555-8161'
 OR phone_number = '(455) 555-5315'
