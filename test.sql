@@ -22,7 +22,8 @@ AND atm_transactions.transaction_type = 'withdraw';
 
 SELECT * people
 JOIN phone_calls ON phone_calls.receiver = people.phone_number
-WHERE receiver = 
+WHERE receiver = '(375) 555-8161'
+OR receiver = 
 
 
 
