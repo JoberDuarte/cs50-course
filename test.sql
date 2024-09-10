@@ -11,7 +11,7 @@ WHERE bakery_security_logs.year = 2023
 AND bakery_security_logs.month = 7
 AND bakery_security_logs.day = 28
 AND bakery_security_logs.hour = 10
-AND bakery_security_logs.hour < 26
+AND bakery_security_logs.minute < 26
 AND bakery_security_logs.activity = 'exit'
 AND phone_calls.duration < 60
 AND atm_transactions.year = 2023
