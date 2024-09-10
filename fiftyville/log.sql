@@ -46,6 +46,7 @@ OR phone_number = '(725) 555-3243';
 
 
 --Verifica os voos que sairam de Fiftyville no dia 29 antes das 12am em que os suspeitos estavam
+-- Encontra o culpado
 SELECT * FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
 JOIN flights ON flights.id = passengers.flight_id
