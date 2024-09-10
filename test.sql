@@ -20,7 +20,7 @@ AND atm_transactions.atm_location = 'Leggett Street'
 AND atm_transactions.transaction_type = 'withdraw';
 
 
-SELECT * people
+SELECT * FROM people
 WHERE phone_number = '(375) 555-8161'
 OR phone_number = '(455) 555-5315'
 OR phone_number = '(725) 555-3243'
