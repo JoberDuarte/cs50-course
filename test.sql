@@ -27,7 +27,8 @@ OR phone_number = '(455) 555-5315'
 OR phone_number = '(725) 555-3243'
 OR phone_number = '(676) 555-6554';
 
-SELECT * FROM passengers
+SELECT * FROM people
+JOIN passengers ON passengers.passport_number = people.passport_number
 JOIN flights ON flights.id = passengers.flight_id
 WHERE (passengers.passport_number = 5773159633
 OR passengers.passport_number = 3592750733
@@ -35,7 +36,7 @@ OR passengers.passport_number = 1988161715
 OR passengers.passport_number = 2438825627
 OR passengers.passport_number = 7226911797
 OR passengers.passport_number = 3391710505
-OR passport_number IS NULL)
+OR passengers.passport_number IS NULL)
 AND flights.origin_airport_id = 8
 AND flights.year = 2023
 AND flights.month = 7
