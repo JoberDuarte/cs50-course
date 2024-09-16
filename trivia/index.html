@@ -7,7 +7,12 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            var buttons = document.querySelectorAll("horse, cat, lion, wolf");
+            var buttons = document.querySelectorAll("#horse, #cat, #lion, #wolf");
+            buttons.forEach(function(button){
+                button.onclick = function(){
+                    document.getElementById("result").innerHTML = "Incorrect!";
+                };
+            });
         </script>
     </head>
     <body>
