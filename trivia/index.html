@@ -8,10 +8,10 @@
 
         <script>
             // TODO: Add code to check answers to questions
-            function checkevent(event)
+            function checkMultiChoice(event)
                 let button = event.target;
 
-                if (button.innerHTML = 'shark'){
+                if (button.innerHTML = 'Shark'){
                     button.style.backgroundColor = 'Green';
                     button.parentElement.querysector('.result').innerHTML = 'Correct';
                 }
@@ -35,11 +35,11 @@
                 <hr>
                 <!--TODO: -->
                 <h3>Which animal can sleep with its eyes open?</h3>
-                <button oneclick ="checkevent"  id="horse">Horse</button>
-                <button oneclick ="checkevent" id="shark">Shark</button>
-                <button oneclick ="checkevent" id="cat">Cat</button>
-                <button oneclick ="checkevent" id="lion">Lion</button>
-                <button oneclick ="checkevent" id="wolf">Wolf</button>
+                <button onclick ="checkMultiChoice(event)" >Horse</button>
+                <button onclick ="checkMultiChoice(event)" >Shark</button>
+                <button onclick ="checkMultiChoice(event)" >Cat</button>
+                <button onclick ="checkMultiChoice(event)" >Lion</button>
+                <button onclick ="checkMultiChoice(event)" >Wolf</button>
                 <p class="result"></p>
 
             </div>
