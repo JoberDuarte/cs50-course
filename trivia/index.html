@@ -8,11 +8,13 @@
 
         <script>
             // TODO: Add code to check answers to questions
+            windo2.onload = function(){
             var buttons = document.querySelectorAll("#horse, #cat, #shark, #lion, #wolf");
             buttons.forEach(function(button){
                 button.onclick = function(){
                     if (button.id !== "shark")
                     document.getElementById("result").innerHTML = "Incorrect!";
+                    }
                 };
             });
 
