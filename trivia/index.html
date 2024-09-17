@@ -8,7 +8,7 @@
 
         <script>
             // TODO: Add code to check answers to questions
-            function checkMultiChoice(event){
+            function checkevent_1(event){
                 let button = event.target;
 
                 if (button.innerHTML == 'Shark'){
@@ -21,6 +21,11 @@
                 }
             }
 
+            function checkevent_2(event){
+                let button = event.target;
+
+                
+            }
 
         </script>
 
@@ -36,11 +41,11 @@
                 <hr>
                 <!--TODO: -->
                 <h3>Which animal can sleep with its eyes open?</h3>
-                <button onclick ="checkMultiChoice(event)" >Horse</button>
-                <button onclick ="checkMultiChoice(event)" >Shark</button>
-                <button onclick ="checkMultiChoice(event)" >Cat</button>
-                <button onclick ="checkMultiChoice(event)" >Lion</button>
-                <button onclick ="checkMultiChoice(event)" >Wolf</button>
+                <button onclick ="checkevent_1(event)" >Horse</button>
+                <button onclick ="checkevent_1(event)" >Shark</button>
+                <button onclick ="checkevent_1(event)" >Cat</button>
+                <button onclick ="checkevent_1(event)" >Lion</button>
+                <button onclick ="checkevent_1(event)" >Wolf</button>
                 <p class="result"></p>
 
             </div>
@@ -52,6 +57,7 @@
                  <h3>Which planet is known as the "red planet"?</h3>
                  <input type="text">
                  <button id="check">Check Answer</button>
+                 <p class = "result"></p>
             </div>
         </div>
     </body>
