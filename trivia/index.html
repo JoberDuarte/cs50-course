@@ -13,7 +13,7 @@
 
                 if (button.innerHTML == 'Shark'){
                     button.style.backgroundColor = 'Green';
-                    button.parentElement.querySelector('.result').innerHTML = 'Correct';
+                    button.parentElement.querySelector('.result').innerHTML = 'Correct!';
                 }
                 else {
                     button.style.backgroundColor = 'Red';
@@ -24,7 +24,16 @@
             function checkevent_2(event){
                 let button = event.target;
 
-                let intput = button.parentElement.querySelector(#)
+                let input = button.parentElement.querySelector('#answer_2');
+
+                if(input.value === 'Mars'){
+                    input.style.backgroundColor = 'Green';
+                    input.parentElement.querySelector('.result').innerHTML = 'Correct!'
+                }
+                else {
+                    input.style.backgroundColor = 'Red';
+                    input.parentElement.querySelector('.result').innerHTML = 'Incorrect'
+                }
             }
 
         </script>
@@ -56,7 +65,7 @@
                 <!-- TODO: Add free response question here -->
                  <h3>Which planet is known as the "red planet"?</h3>
                  <input type="text" id = "answer_2">
-                 <button id="check">Check Answer</button>
+                 <button onclick = "checkevent_2(event)">Check Answer</button>
                  <p class = "result"></p>
             </div>
         </div>
