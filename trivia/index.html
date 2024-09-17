@@ -8,7 +8,7 @@
 
         <script>
             // TODO: Add code to check answers to questions
-            function checkMultiChoice(event)
+            function checkMultiChoice(event){
                 let button = event.target;
 
                 if (button.innerHTML == 'Shark'){
@@ -19,6 +19,7 @@
                     button.style.backgroundColor = 'Red';
                     button.parentElement.querySelector('.result').innerHTML = 'Incorrect';
                 }
+            }
 
 
         </script>
