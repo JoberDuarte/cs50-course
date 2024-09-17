@@ -8,12 +8,13 @@
 
         <script>
             // TODO: Add code to check answers to questions
-            var buttons = document.querySelectorAll("#horse, #cat, #shark, #lion, #wolf");
+            var buttons = document.querySelector("#horse, #cat, #lion, #wolf");
             buttons.forEach(function(button){
                 button.onclick = function(){
                     document.getElementById("result").innerHTML = "Incorrect!";
                 };
             });
+            buttons.onclick = ""#FF0000""
 
         </script>
 
@@ -29,7 +30,7 @@
                 <hr>
                 <!--TODO: -->
                 <h3>Which animal can sleep with its eyes open?</h3>
-                <button type="button" id="horse" onclick="#FF0000">Horse</button>
+                <button type="button" id="horse">Horse</button>
                 <button type="button" id="shark">Shark</button>
                 <button type="button" id="cat">Cat</button>
                 <button type="button" id="lion">Lion</button>
