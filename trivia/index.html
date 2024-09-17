@@ -8,7 +8,18 @@
 
         <script>
             // TODO: Add code to check answers to questions
-         
+            function checkevent(event)
+                let button = event.target;
+
+                if (button.innerHTML = 'shark'){
+                    button.style.backgroundColor = 'Green';
+                    button.parentElement.querysector('.result').innerHTML = 'Correct';
+                }
+                else {
+                    button.style.backgroundColor = 'Red';
+                    button.parentElement.querysector('.result').innerHTML = 'Incorrect';
+                }
+
 
         </script>
 
@@ -24,13 +35,12 @@
                 <hr>
                 <!--TODO: -->
                 <h3>Which animal can sleep with its eyes open?</h3>
-                <button type="button" id="horse">Horse</button>
-                <button type="button" id="shark">Shark</button>
-                <button type="button" id="cat">Cat</button>
-                <button type="button" id="lion">Lion</button>
-                <button type="button" id="wolf">Wolf</button>
-                <p id="result"></p>
-
+                <button oneclick ="checkevent"  id="horse">Horse</button>
+                <button oneclick ="checkevent" id="shark">Shark</button>
+                <button oneclick ="checkevent" id="cat">Cat</button>
+                <button oneclick ="checkevent" id="lion">Lion</button>
+                <button oneclick ="checkevent" id="wolf">Wolf</button>
+                <p class="result"></p>
 
             </div>
 
