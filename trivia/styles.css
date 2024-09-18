@@ -32,6 +32,14 @@ body {
     transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
 }
 
+h1.header {
+    background-color: #477bff;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
