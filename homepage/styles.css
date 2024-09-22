@@ -2,12 +2,13 @@
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    margin: 30px;
+
 }
 
 .header {
     background-color: SlateBlue;
     color: #fff;
-    margin-bottom: 3rem;
     padding: 4rem 2rem;
     text-align: center;
     font-family: "Courier New", Courier, monospace;
