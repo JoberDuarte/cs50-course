@@ -42,7 +42,7 @@ ul{
     font-family: "Courier New", Courier, monospace;
 }
 
-a{
+.button{
     background-color: #e7bf2b;
     color: SlateBlue;
     padding: 14px 25px;
@@ -50,8 +50,9 @@ a{
     text-decoration: none;
     display: inline-block;
     border-radius: 8px;
+    cursor: pointer;
 }
-a:hover{
+.button:hover{
     background-color: #ffea66;
     color: SlateBlue;
 }
