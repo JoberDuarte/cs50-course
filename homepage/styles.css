@@ -16,10 +16,11 @@
 }
 
 .img{
-    margin: 3rem;
-    max-width: 500px;
+    margin: 1rem;
+    max-width: 1800px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
 
 }
 
