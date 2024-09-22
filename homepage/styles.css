@@ -67,3 +67,11 @@ footer{
     margin: 15px;
 }
 
+hr{
+    border: 0;
+    height: 1px;
+    background-color: black;
+    
+
+}
+
