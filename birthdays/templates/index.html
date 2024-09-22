@@ -37,9 +37,7 @@
                         <!-- TODO: Loop through the database entries to display them in this table -->
                          {% for birthday in birthdays %}
                          <tr>
-                            <tr>
-                                {{ birthdays.name }}
-                            </tr>
+                            <td>{{ birthday.name }}</td>
                          </tr>
 
                          {% endfor %}
