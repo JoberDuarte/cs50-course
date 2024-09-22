@@ -14,3 +14,22 @@ TAGS HTML
 <em>
 
 CSS properties
+display
+justify-content
+gap
+margin-top
+background-color
+color
+padding
+text-align
+font-family
+font-weight
+max-widht
+margin
+border-radius
+box-shadow
+width
+cursor
+
+
+
