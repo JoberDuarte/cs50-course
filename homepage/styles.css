@@ -39,3 +39,7 @@ ul{
     font-family: "Courier New", Courier, monospace;
 }
 
+button{
+    text-decoration: none;
+}
+
