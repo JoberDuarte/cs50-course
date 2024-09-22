@@ -32,4 +32,4 @@ width
 cursor
 
 
-I used JavaScript to implement button functionalities, such as redirecting to other pages. Bootstrap was the ideal choice to ensure the layout was responsive across different devices.
+I chose JavaScript to create button functionalities and redirects to other pages, and I used JavaScript for button functions and page redirects.
