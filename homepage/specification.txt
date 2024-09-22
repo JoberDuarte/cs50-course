@@ -1,0 +1,12 @@
+TAGS HTML
+
+<div>
+<img>
+<h1>
+<h2>
+<p>
+<ul>
+<li>
+<strong>
+<h3>
+<footer>
