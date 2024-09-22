@@ -10,7 +10,8 @@
     margin-bottom: 3rem;
     padding: 4rem 2rem;
     text-align: center;
-    font-family: courier new;
+    font-family: "Courier New", Courier, monospace;
+    font-wight: bold;
 }
 
 .img{
