@@ -10,3 +10,4 @@ TAGS HTML
 <strong>
 <h3>
 <footer>
+<h6>
