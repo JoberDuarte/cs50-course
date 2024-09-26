@@ -130,6 +130,10 @@ def register():
         elif not request.form.get("register_password") == request.form.get("confirm_password"):
             return apology("passwrords are diferent", 400)
 
+               # Check if register_password == confirm_password
+        elif request.form.get("register_password") == request.form.get("confirm_password"):
+            password_hash = generate_password_hash("resister_password")
+
         try:
             db.execute("INSERT INTO users ()")
 
