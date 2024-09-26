@@ -133,7 +133,7 @@ def register():
                # Check if register_password == confirm_password
         elif request.form.get("register_password") == request.form.get("confirm_password"):
             password_hash = generate_password_hash("resister_password")
-            username = request.form.get("resister_username")
+            username = request.form.get("register_username")
 
             try:
                 db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?)" (username, password_hash))
