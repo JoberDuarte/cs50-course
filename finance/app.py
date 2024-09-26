@@ -134,10 +134,11 @@ def register():
         elif request.form.get("register_password") == request.form.get("confirm_password"):
             password_hash = generate_password_hash("resister_password")
 
-        try:
-            db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?)" (register_usarname, password_hash))
+            try:
+                db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?)" (register_usarname, password_hash))
 
-        except 
+            except ValueError:
+                return apology("User ")
 
 
 
