@@ -127,8 +127,8 @@ def register():
             return apology("must confirm password", 403)
 
        # Check if register_password == confirm_password
-       elif not request.form.get("register_password") == request.form.get("confirm_password"):
-            return apology("passwrord and confirm password are diferent,")
+        elif not request.form.get("register_password") == request.form.get("confirm_password"):
+            return apology("passwrords are diferent", 400)
 
 
 
