@@ -135,7 +135,7 @@ def register():
             password_hash = generate_password_hash("resister_password")
 
             try:
-                db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?)" (register_usarname, password_hash))
+                db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?)" (register_username, password_hash))
 
             except ValueError:
                 return apology("User already exists, change username")
