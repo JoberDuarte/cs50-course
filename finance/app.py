@@ -126,7 +126,8 @@ def register():
         elif not request.form.get("confirm_password"):
             return apology("must confirm password", 403)
 
-        #
+        #Ensure usarname is unique
+        elif request.form.get("register_password")
 
 
     else:
