@@ -137,12 +137,13 @@ def register():
             balance = 10000.00
 
             try:
+                print(type(username), type(password_hash), type(balance))
                 db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?, ?)", (username, password_hash, balance))
             except Exception as e:
                 print(e)
                 return apology("An error occurred")
 
-        print(type(username), type(password_hash), type(balance))
+
 
 
     else:
