@@ -138,10 +138,9 @@ def register():
 
             try:
                 db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?, ?)", (username, password_hash, balance))
-
-            except ValueError:
-                return apology("User already exists, change username")
-            return render_template("login.html")
+            except Exception as e:
+                print(e)
+                return apology("An error occurred")
 
 
     else:
