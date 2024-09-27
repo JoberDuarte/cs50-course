@@ -141,9 +141,9 @@ def register():
 
             except ValueError:
                 return apology("User already exists, change username")
-
-
-
+        print(username)
+        print(password_hash)
+        print(balance)
 
     else:
         return render_template("register.html")
