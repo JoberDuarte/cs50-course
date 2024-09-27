@@ -136,7 +136,7 @@ def register():
             username = request.form.get("register_username")
 
             try:
-                db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?)", (username, password_hash,))
+                db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", (username, password_hash,))
 
             except ValueError:
                 return apology("User already exists, change username")
