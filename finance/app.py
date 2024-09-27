@@ -141,6 +141,7 @@ def register():
             except Exception as e:
                 print(e)
                 return apology("An error occurred")
+        print(type(username), type(password_hash), type(balance))
 
 
     else:
