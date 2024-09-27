@@ -143,9 +143,6 @@ def register():
                 print(e)
                 return apology("An error occurred")
 
-
-
-
     else:
         return render_template("register.html")
 
