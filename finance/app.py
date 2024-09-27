@@ -135,15 +135,14 @@ def register():
             password_hash = generate_password_hash(request.form.get("register_password"))
             username = request.form.get("register_username")
             balance = 10000.00
-            print(username)
-            print(password_hash)
-            print(balance)
 
-            #try:
-                #db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?, ?)", (username, password_hash, balance))
+            try:
+                db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?, ?)", (username, password_hash, balance))
+                return render_template("login.html")
 
-           # except ValueError:
-               # return apology("User already exists, change username")
+
+            except ValueError:
+                return apology("User already exists, change username")
 
 
     else:
