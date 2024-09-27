@@ -138,7 +138,8 @@ def register():
 
             try:
                 print(type(username), type(password_hash), type(balance))
-                db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?, ?)", (username, password_hash, balance))
+                values = (username, password_hash, balance)
+                db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?, ?)", values)
             except Exception as e:
                 print(e)
                 return apology("An error occurred")
