@@ -139,7 +139,7 @@ def register():
             try:
                 values = (username, password_hash, balance)
                 db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?, ?)", *values)
-                return("/login")
+                return render_template("register.html")
 
             except Exception as e:
                 print(e)
