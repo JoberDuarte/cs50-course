@@ -139,6 +139,8 @@ def register():
             try:
                 values = (username, password_hash, balance)
                 db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?, ?)", *values)
+                return("/login")
+
             except Exception as e:
                 print(e)
                 return apology("An error occurred")
