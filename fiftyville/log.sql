@@ -31,6 +31,7 @@ AND bakery_security_logs.hour = 10
 AND bakery_security_logs.minute < 26
 AND bakery_security_logs.activity = 'exit'
 AND phone_calls.duration < 60
+AND phone_calls.day = 28
 AND atm_transactions.year = 2023
 AND atm_transactions.month = 7
 AND atm_transactions.day = 28
