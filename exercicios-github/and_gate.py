@@ -16,4 +16,4 @@ Refer - https://www.geeksforgeeks.org/logic-gates-in-python/
 """
 
 
-def and_gate
+def and_gate()
