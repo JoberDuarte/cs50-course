@@ -29,5 +29,11 @@ def and_gate(input_1: int, input_2: int) -> int:
     >>>> and_gate(1, 1)
     1
     """
-    return 
+    return int(input_1, input_2)
+
+
+if __name__ == "__main__":
+    import doctest
+
+    doctest.testmood()
 
