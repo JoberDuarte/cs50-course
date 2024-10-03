@@ -24,3 +24,5 @@ unitlist = (
 )
 units = {s: [u for u in unitlist if s in u] for s in squares}
 peers = {s: set(sum(units[s], [])) - {s} for s in squares}
+
+#https://github.com/TheAlgorithms/Python/blob/master/data_structures/arrays/sudoku_solver.py
