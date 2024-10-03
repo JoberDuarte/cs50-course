@@ -18,4 +18,7 @@ Refer - https://www.geeksforgeeks.org/logic-gates-in-python/
 
 def and_gate(input_1: int, input_2: int) -> int:
     """
-    C
+    Calculate AND of the input values
+
+    >>>> and_gate(0, 0)
+    
