@@ -17,4 +17,8 @@ digits = "123456789"
 rows = "ABCDEFGHI"
 cols = digits
 squares = cross(rows, cols)
-unitlist = 
+unitlist = (
+    [cross(rows, c) for c in cols]
+    +[cross(r, cols) for r in rows]
+    +[]
+)
