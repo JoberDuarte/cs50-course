@@ -26,5 +26,8 @@ def and_gate(input_1: int, input_2: int) -> int:
     0
     >>>> and_gate(1, 0)
     0
-    
+    >>>> and_gate(1, 1)
+    1
+    """
+    return 
 
