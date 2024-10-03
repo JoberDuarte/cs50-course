@@ -13,4 +13,8 @@ def cross(items_a, items_b):
     return [a + b for a in items_a for b in itens_b]
 
 
-
+digits = "123456789"
+rows = "ABCDEFGHI"
+cols = digits
+squares = cross(rows, cols)
+unitlist = 
