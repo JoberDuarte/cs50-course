@@ -24,12 +24,17 @@ nav .navbar-brand .green
 table {
     background-color: transparent;
     margin-bottom: 1rem;
-    width: 100%;
+    width: 80%;
+    border: 1px solid;
+    border-color: black;
 }
 
 table th,
 table td {
     padding: 0.75rem;
     vertical-align: middle;
+    background-color: lightblue;
+    border: 1px solid;
+    border-color: black;
 }
 
