@@ -68,14 +68,17 @@ input[type="text"]:hover, input[type="number"]:hover {
 table {
     background-color: transparent;
     margin-bottom: 1rem;
-    width: 100%;
+    width: flex;
+    background-color: lightblue;
+    border: 2px;
 }
 
 table th,
 table td {
     padding: 0.75rem;
     vertical-align: middle;
-    border: 2px;
+    background-color: lightblue;
+
 }
 
 tbody tr:nth-of-type(odd) {
