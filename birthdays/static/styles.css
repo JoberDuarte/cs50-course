@@ -75,6 +75,7 @@ table th,
 table td {
     padding: 0.75rem;
     vertical-align: middle;
+    border: 2px;
 }
 
 tbody tr:nth-of-type(odd) {
