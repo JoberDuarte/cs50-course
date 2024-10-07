@@ -66,10 +66,10 @@ def buy():
         db.execute("UPDATE users SET cash = cash - :total_shares_cost WHERE id = :user_id", total_shares_cost=total_shares_cost, user_id=session["user_id"])
 
         #insert purchase on transaction table
-        db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price) VALUES(:user_id, :symbol; :name; :shares; :price)",
+        db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price) VALUES(:user_id, :symbol, :name, :shares, :price)",
                    user_id=session["user_id"], symbol=symbol, name=name, shares=shares, price=price)
 
-        flask(f"Bought {shares} shares of {symbol} = {name} for {usd(total_shares_cost)}!")
+        flash(f"Bought {shares} shares of {name}({symbol}) for {usd(total_shares_cost)}!")
         return redirect("/")
 
 
