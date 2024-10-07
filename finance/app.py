@@ -61,7 +61,11 @@ def buy():
         if cash < total_shares_cost:
             return apology("not enough cash")
 
-        #
+        #update users table
+        db.execute("UPDATE users SET cash = cash - :total_shares_cost WHERE id = :user_id"; total_shares_cost=total_shares_cost, user_id=session["user_id"])
+
+        #insert purchase on transaction table
+        db.execute("INSERT INTO transactions ()")
 
 
 
