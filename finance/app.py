@@ -44,8 +44,19 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
         symbol = request.form.get("symbol")
-        shares = requ
-        return apology("TODO")
+        shares = request.form.get("shares")
+        if not symbol:
+            return apology("Must provide a symbol")
+        elif not shares or not shares.isdigit() or int(shares) <= 0:
+            return apology("Must provide a positive integer number of shares")
+
+        quote = lookup(symbol)
+        if quote is None:
+            return apology("symbol not found")
+
+        price = quote ["price"]
+        total_shares_cost = int(shares) * price
+        cash
     else:
         return render_template("buy.html")
 
