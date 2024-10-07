@@ -54,9 +54,18 @@ def buy():
         if quote is None:
             return apology("symbol not found")
 
-        price = quote ["price"]
+        price = quote["price"]
         total_shares_cost = int(shares) * price
-        cash
+        cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
+
+        if cash < total_shares_cost:
+            return apology("not enough cash")
+
+        #
+
+
+
+
     else:
         return render_template("buy.html")
 
