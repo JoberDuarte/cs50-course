@@ -55,6 +55,7 @@ def buy():
             return apology("symbol not found")
 
         price = quote["price"]
+        name = quote["name"]
         total_shares_cost = int(shares) * price
         cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
 
