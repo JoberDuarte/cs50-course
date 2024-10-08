@@ -1,9 +1,32 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Index
+    Quote
 {% endblock %}
 
 {% block main %}
-
+    <h1>Get a Quote</h1>
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text">
+        </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Quote</button>
+    </form>
+    {% if quote %}
+    <div class="text-cecnter">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>{{quote['name']}}</td>
+            <td>{{quote['symbol']}}</td>
+            <td>{{quote['price']}}</td>
+        </tr>
+    </table>
+    </div>
+    {% endif %}
 {% endblock %}
