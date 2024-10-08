@@ -28,8 +28,13 @@
                 </tr>
             {% endfor %}
             <tr>
-                <td>{{ stock.symbol }}</td>
+                <td>CASH</td>
+                <td>{{ cash }}</td>
+            </tr>
+            <tr>
+                <td>TOTAL</td>
+                <td>{{ total_value }}</td>
             </tr>
         </tbody>
-    {% endif %}
+    </table>
 {% endblock %}
