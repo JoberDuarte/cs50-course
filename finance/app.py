@@ -45,7 +45,7 @@ def index():
 
     # Variables
     total_values = cash
-    #grand_total = cash
+    grand_total = cash
 
     # Iterate over stocks and add price and total value
     for stock in stocks:
@@ -54,18 +54,18 @@ def index():
         stock["price"] = quote["price"]
         stock["value"] = stock["price"] * stock["total_shares"]
         total_values += stock["value"]
-        #grand_total += stock["value"]
+        grand_total += stock["value"]
 
         # Format usd
-        stock["price"] = usd(stock["price"])
-        stock["value"] = usd(stock["value"])
+        #stock["price"] = usd(stock["price"])
+        #stock["value"] = usd(stock["value"])
 
-    cash = usd(cash)
-    total_values = usd(total_values)
+    #cash = usd(cash)
+    #total_values = usd(total_values)
     #grand_total = usd(grand_total)
 
 
-    return render_template("index.html", stocks=stocks, cash=cash, total_values=total_values)
+    return render_template("index.html", stocks=stocks, cash=cash, total_values=total_values, grand_total=grand_total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
