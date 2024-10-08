@@ -44,8 +44,8 @@ def index():
     cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
 
     # Variables
-    total_values = 0
-    grand_total = cash
+    total_values = cash
+    grand_total = 0
 
     # Iterate over stocks and add price and total value
     for stock in stocks:
