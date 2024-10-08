@@ -43,6 +43,8 @@ def index():
     #Get cash
     cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
 
+    #
+
 
     return apology("TODO")
 
