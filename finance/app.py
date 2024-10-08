@@ -51,7 +51,7 @@ def index():
     for stock in stocks:
         quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
-        stock["price"] = quote["price"]
+        stock["price"] = usd(quote["price"])
         stock["value"] = stock["price"] * stock["total_shares"]
         total_values += stock["value"]
         grand_total += stock["value"]
