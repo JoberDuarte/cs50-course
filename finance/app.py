@@ -52,7 +52,7 @@ def index():
         quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
         stock["price"] = quote["price"]
-        stock["value"]
+        stock["value"] = quote["]
 
 
     return apology("TODO")
