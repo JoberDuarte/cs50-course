@@ -3,5 +3,6 @@
     "files.associations": {
         "helpers.h": "c",
         "ctype.h": "c"
-    }
+    },
+    "python.REPL.enableREPLSmartSend": false
 }
