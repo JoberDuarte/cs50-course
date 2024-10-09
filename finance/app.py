@@ -116,6 +116,8 @@ def history():
     # quey of data base
     transactions = db.execute("SELECT * FROM transactions WHERE user_id = :user_id ORDER BY date DESC", user_id=session["user_id"])
 
+    if 
+
     # render page
     return render_template("history.html", transactions=transactions)
 
