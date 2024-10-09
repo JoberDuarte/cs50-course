@@ -245,6 +245,17 @@ def sell():
                 if stock["total_shares"] < shares:
                     flash(f"You have only {shares} shares({symbol})!")
                     return apology("not enough shares")
+                else:
+                    #get quote
+                    quote = lookup(symbol)
+                    if quote is None:
+                        return apology("Symbol not found")
+                    price = quote["price"]
+                    total_sale = shares * price
+
+                    #update table
+                    db.execute()
+
 
 
     return render_template("sell.html")
