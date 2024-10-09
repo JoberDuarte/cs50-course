@@ -119,9 +119,9 @@ def history():
     for transtaction in transactions:
 
         if transaction["shares"] < 0:
-            trasactions["type"] = "Sell"
+            transactions["type"] = "Sell"
         else:
-            trasactions["type"] = "Buy"
+            transactions["type"] = "Buy"
 
     # render page
     return render_template("history.html", transactions=transactions)
