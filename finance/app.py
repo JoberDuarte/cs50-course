@@ -265,7 +265,7 @@ def sell():
 
                     #insert purchase on transaction table
                     db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price) VALUES(:user_id, :symbol, :name, :shares, :price)",
-                            user_id=session["user_id"], symbol=symbol, name=name, shares=shares, price=price)
+                            user_id=session["user_id"], symbol=symbol, name=name, shares=-shares, price=price)
 
                     flash(f"Sold {shares} shares of {name}({symbol}) for {usd(total_sale)}!")
                     return redirect("/")
