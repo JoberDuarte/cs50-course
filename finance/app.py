@@ -240,7 +240,8 @@ def sell():
         else:
             shares = int(shares)
 
-        
+        for stock in stocks:
+            if stock
 
 
     return render_template("sell.html")
