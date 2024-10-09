@@ -119,8 +119,10 @@ def history():
     for transaction in transactions:
         transaction["price"] = float(transaction["price"])
         transaction["value"] = transaction["price"] * transaction["shares"]
+
+        # change to USD
         transaction["value"] = usd(transaction["value"])
-        ransaction["price"] = usd(transaction["price"])
+        transaction["price"] = usd(transaction["price"])
 
         if transaction["shares"] < 0:
             transaction["type"] = "Sell"
