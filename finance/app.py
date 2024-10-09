@@ -117,6 +117,7 @@ def history():
     transactions = db.execute("SELECT * FROM transactions WHERE user_id = :user_id ORDER BY date DESC", user_id=session["user_id"])
 
     for transaction in transactions:
+        transaction[]
 
         if transaction["shares"] < 0:
             transaction["type"] = "Sell"
