@@ -117,9 +117,10 @@ def history():
     transactions = db.execute("SELECT * FROM transactions WHERE user_id = :user_id ORDER BY date DESC", user_id=session["user_id"])
 
     for transaction in transactions:
-        transaction["price"] = usd(transaction["price"])
+        transaction["price"] = float(transaction["price"])
         transaction["value"] = transaction["price"] * transaction["shares"]
         transaction["value"] = usd(transaction["value"])
+        ransaction["price"] = usd(transaction["price"])
 
         if transaction["shares"] < 0:
             transaction["type"] = "Sell"
