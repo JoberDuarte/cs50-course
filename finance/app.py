@@ -250,6 +250,7 @@ def sell():
                     quote = lookup(symbol)
                     if quote is None:
                         return apology("Symbol not found")
+                    name = quote["name"]
                     price = quote["price"]
                     total_sale = shares * price
 
@@ -260,9 +261,9 @@ def sell():
                     db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price) VALUES(:user_id, :symbol, :name, :shares, :price)",
                             user_id=session["user_id"], symbol=symbol, name=name, shares=shares, price=price)
 
-                    flash(f"Bought {shares} shares of {name}({symbol}) for {usd(total_shares_cost)}!")
+                    flash(f"sold {shares} shares of {name}({symbol}) for {usd(total_sale)}!")
                     return redirect("/")
-
-
-
-    return render_template("sell.html")
+        return apology("Symbol not found")
+    
+    else:
+        return render_template("sell.html")
