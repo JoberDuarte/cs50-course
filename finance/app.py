@@ -74,7 +74,7 @@ def index():
 def buy():
     """Buy shares of stock"""
     if request.method == "POST":
-        symbol = request.form.get("symbol")
+        symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
         if not symbol:
             return apology("Must provide a symbol")
@@ -172,7 +172,7 @@ def logout():
 def quote():
     """Get stock quote."""
     if request.method == "POST":
-        symbol = request.form.get("symbol")
+        symbol = request.form.get("symbol").upper()
         quote = lookup(symbol)
         if not quote:
             return apology("Simbol not found", 400)
