@@ -116,12 +116,12 @@ def history():
     # quey of data base
     transactions = db.execute("SELECT * FROM transactions WHERE user_id = :user_id ORDER BY date DESC", user_id=session["user_id"])
 
-    for transtaction in transactions:
+    for transaction in transactions:
 
         if transaction["shares"] < 0:
-            transactions["type"] = "Sell"
+            transaction["type"] = "Sell"
         else:
-            transactions["type"] = "Buy"
+            transaction["type"] = "Buy"
 
     # render page
     return render_template("history.html", transactions=transactions)
