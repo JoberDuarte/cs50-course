@@ -11,7 +11,7 @@
             <select autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol">
                 <option value="">Select a Stock</option>
                 {% for stock in stocks %}
-                    <option value="{{ stock.symbol }}">[ {{stock.symbol}} ] = {{stock.name}}</option>
+                    <option value="{{ stock.symbol }}">{{stock.symbol}} = {{stock.name}}</option>
                 {% endfor %}
             </select>
         </div>
