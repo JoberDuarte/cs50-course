@@ -231,7 +231,7 @@ def sell():
                         user_id=session["user_id"])
 
     for stock in stocks:
-        quote = lookup(symbol)
+        quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
 
 
