@@ -16,7 +16,7 @@
                 <th>Shares</th>
                 <th>Price</th>
                 <th>Total</th>
-                <th>Timw</th>
+                <th>Time</th>
             </tr>
         </thead>
         <tbody>
@@ -25,9 +25,10 @@
                     <td>{{ transaction.type }}</td>
                     <td>{{ transaction.symbol }}</td>
                     <td>{{ transaction.name }}</td>
-                    <td>{{ transaction.total_shares }}</td>
+                    <td>{{ transaction.shares }}</td>
                     <td>{{ transaction.price }}</td>
-                    <td>{{ transaction.value }}</td>
+                    <td>{{ transaction.shares * transactions.price }}</td>
+                    <td>{{ transaction.date }}</td>
                 </tr>
             {% endfor %}
         </tbody>
