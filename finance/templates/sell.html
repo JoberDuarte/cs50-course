@@ -8,10 +8,15 @@
     <h1>Sell Shares</h1>
     <form action="/sell" method="post">
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares" type="text">
+            <select autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol">
+                <option value="">Select a Stock</option>
+                {% for stock in stocks %}
+                    <option>[ {{stock.symbol}} ] = {{stock.name}}</option>
+                {% endfor %}
         </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Number of Shares" type="text">
         </div>
-        <button class="btn btn-primary" type="submit" value="Buy">Buy</button>
+        <button class="btn btn-primary" type="submit" value="Buy">Sell</button>
     </form>
 {% endblock %}
