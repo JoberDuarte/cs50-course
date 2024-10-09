@@ -103,9 +103,6 @@ def buy():
         flash(f"Bought {shares} shares of {name}({symbol}) for {usd(total_shares_cost)}!")
         return redirect("/")
 
-
-
-
     else:
         return render_template("buy.html")
 
