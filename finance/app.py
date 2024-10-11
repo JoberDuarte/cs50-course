@@ -291,18 +291,18 @@ def sell():
     else:
         return render_template("sell.html", stocks=stocks)
 
-@app.route("/cash", methods=["GET", "POST"])
+@app.route("/funds", methods=["GET", "POST"])
 @login_required
-def cash():
+def funds():
 
     """Add more cash on balance"""
 
     if request.method == "POST":
-        cash = request.form.get("cash")
+        cash = request.form.get("funds")
 
         if not cash or not cash.isdigit() or int(shares) <= 0:
             return apology("Must provide a positive number")
 
     else:
-        return render_template("cash.html")
+        return render_template("funds.html")
 
