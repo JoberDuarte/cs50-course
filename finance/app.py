@@ -298,10 +298,12 @@ def funds():
     """Add more cash on balance"""
 
     if request.method == "POST":
-        funds = request.form.get("funds")
+        funds = int(request.form.get("funds"))
 
         if not funds or not funds.isdigit() or int(funds) <= 0:
             return apology("Must provide a positive number")
+
+
 
         # cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
         db.execute("UPDATE users SET cash = cash + :funds WHERE id = :user_id", funds=funds, user_id=session["user_id"])
