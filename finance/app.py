@@ -306,6 +306,7 @@ def funds():
 
         funds = int(funds)
         db.execute("UPDATE users SET cash = cash + :funds WHERE id = :user_id", funds=funds, user_id=session["user_id"])
+        cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
         return redirect("/")
 
 
