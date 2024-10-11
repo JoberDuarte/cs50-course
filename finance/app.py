@@ -239,8 +239,6 @@ def register():
         return render_template("register.html")
 
 
-
-
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
@@ -292,3 +290,9 @@ def sell():
 
     else:
         return render_template("sell.html", stocks=stocks)
+
+@app.route("/cash", methods=["GET", "POST"])
+@login_required
+def cash():
+    """Add more cash on balance"""
+    return apology("TODO")
