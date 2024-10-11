@@ -298,15 +298,14 @@ def funds():
     """Add more cash on balance"""
 
     if request.method == "POST":
-        cash = request.form.get("funds")
+        funds = request.form.get("funds")
 
-        if not cash or not cash.isdigit() or int(shares) <= 0:
+        if not funds or not funds.isdigit() or int(funds) <= 0:
             return apology("Must provide a positive number")
 
     else:
         return render_template("funds.html")
 
- 
 
         if cash < total_shares_cost:
             return apology("not enough cash")
