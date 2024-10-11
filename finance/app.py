@@ -310,7 +310,8 @@ def funds():
 
 
     else:
-        
+        cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
+        cash = usd(cash)
         return render_template("funds.html",cash=cash)
 
 
