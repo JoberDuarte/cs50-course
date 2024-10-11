@@ -295,4 +295,4 @@ def sell():
 @login_required
 def cash():
     """Add more cash on balance"""
-    return apology("TODO")
+    return apology("/cash.html")
