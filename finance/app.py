@@ -310,7 +310,7 @@ def funds():
 
 
     else:
-        return render_template("funds.html")
+        return render_template("funds.html",cash=cash)
 
 
 
