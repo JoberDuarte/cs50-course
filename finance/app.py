@@ -295,6 +295,9 @@ def sell():
 @login_required
 def cash():
     if request.method == "POST":
+        cash = request.form.get("cash")
+
+
         
     """Add more cash on balance"""
     return apology("/cash.html")
