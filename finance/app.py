@@ -298,7 +298,7 @@ def funds():
     """Add more cash on balance"""
 
     if request.method == "POST":
-        funds = int(request.form.get("funds"))
+        funds = request.form.get("funds")
 
         if not funds or not funds.isdigit() or int(funds) <= 0:
             return apology("Must provide a positive number")
