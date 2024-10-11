@@ -294,5 +294,7 @@ def sell():
 @app.route("/cash", methods=["GET", "POST"])
 @login_required
 def cash():
+    if request.method == "POST":
+        
     """Add more cash on balance"""
     return apology("/cash.html")
