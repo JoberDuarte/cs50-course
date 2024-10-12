@@ -226,7 +226,7 @@ def register():
             balance = 10000.00
             values = (username, password_hash, balance)
             db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?, ?)", *values)
-            return redirect("login.html")
+            return redirect("/login")
 
         except Exception as e:
             print(e)
