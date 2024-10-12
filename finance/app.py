@@ -218,8 +218,7 @@ def register():
             return apology("passwords are diferent", 400)
 
             # Check if register_password == confirm_password
-        #elif request.form.get("password") == request.form.get("confirmation"):
-
+        # elif request.form.get("password") == request.form.get("confirmation"):
 
         try:
             password_hash = generate_password_hash(request.form.get("password"))
