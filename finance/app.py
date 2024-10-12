@@ -41,11 +41,11 @@ def index():
                         user_id=session["user_id"])
 
     # Get cash
-    cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
+    cash = db.execute("SELECT cash FROM users WHERE id = :user_id",
+                      user_id=session["user_id"])[0]["cash"]
 
     # Variables
     total_values = cash
-
 
     # Iterate over stocks and add price and total value
     for stock in stocks:
@@ -55,16 +55,12 @@ def index():
         stock["value"] = stock["price"] * stock["total_shares"]
         total_values += stock["value"]
 
-
         # Format usd
         stock["price"] = usd(stock["price"])
         stock["value"] = usd(stock["value"])
 
-
     cash = usd(cash)
     total_values = usd(total_values)
-
-
 
     return render_template("index.html", stocks=stocks, cash=cash, total_values=total_values)
 
@@ -88,15 +84,17 @@ def buy():
         price = quote["price"]
         name = quote["name"]
         total_shares_cost = int(shares) * price
-        cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
+        cash = db.execute("SELECT cash FROM users WHERE id = :user_id",
+                          user_id=session["user_id"])[0]["cash"]
 
         if cash < total_shares_cost:
             return apology("not enough cash")
 
-        #update users table
-        db.execute("UPDATE users SET cash = cash - :total_shares_cost WHERE id = :user_id", total_shares_cost=total_shares_cost, user_id=session["user_id"])
+        # update users table
+        db.execute("UPDATE users SET cash = cash - :total_shares_cost WHERE id = :user_id",
+                   total_shares_cost=total_shares_cost, user_id=session["user_id"])
 
-        #insert purchase on transaction table
+        # insert purchase on transaction table
         db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price) VALUES(:user_id, :symbol, :name, :shares, :price)",
                    user_id=session["user_id"], symbol=symbol, name=name, shares=shares, price=price)
 
@@ -110,11 +108,11 @@ def buy():
 @app.route("/history")
 @login_required
 def history():
-
     """Show history of transactions"""
 
     # quey of data base
-    transactions = db.execute("SELECT * FROM transactions WHERE user_id = :user_id ORDER BY date DESC", user_id=session["user_id"])
+    transactions = db.execute(
+        "SELECT * FROM transactions WHERE user_id = :user_id ORDER BY date DESC", user_id=session["user_id"])
 
     for transaction in transactions:
         transaction["price"] = float(transaction["price"])
@@ -197,14 +195,12 @@ def quote():
         return render_template("quote.html")
 
 
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
     if request.method == "POST":
 
-          # Ensure username was submitted
+        # Ensure username was submitted
         if not request.form.get("register_username"):
             return apology("must provide username", 403)
 
@@ -220,7 +216,7 @@ def register():
         elif not request.form.get("register_password") == request.form.get("confirm_password"):
             return apology("passwrords are diferent", 400)
 
-               # Check if register_password == confirm_password
+            # Check if register_password == confirm_password
         elif request.form.get("register_password") == request.form.get("confirm_password"):
             password_hash = generate_password_hash(request.form.get("register_password"))
             username = request.form.get("register_username")
@@ -251,8 +247,7 @@ def sell():
         quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
 
-
-    #submit form
+    # submit form
     if request.method == "POST":
         symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
@@ -269,7 +264,7 @@ def sell():
                     flash(f"You have only {shares} shares({symbol})!")
                     return apology("not enough shares")
                 else:
-                    #get quote
+                    # get quote
                     quote = lookup(symbol)
                     if quote is None:
                         return apology("Symbol not found")
@@ -277,12 +272,13 @@ def sell():
                     price = quote["price"]
                     total_sale = shares * price
 
-                        #update users table
-                    db.execute("UPDATE users SET cash = cash + :total_sale WHERE id = :user_id", total_sale=total_sale, user_id=session["user_id"])
+                    # update users table
+                    db.execute("UPDATE users SET cash = cash + :total_sale WHERE id = :user_id",
+                               total_sale=total_sale, user_id=session["user_id"])
 
-                    #insert purchase on transaction table
+                    # insert purchase on transaction table
                     db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price) VALUES(:user_id, :symbol, :name, :shares, :price)",
-                            user_id=session["user_id"], symbol=symbol, name=name, shares=-shares, price=price)
+                               user_id=session["user_id"], symbol=symbol, name=name, shares=-shares, price=price)
 
                     flash(f"Sold {shares} shares of {name}({symbol}) for {usd(total_sale)}!")
                     return redirect("/")
@@ -291,10 +287,10 @@ def sell():
     else:
         return render_template("sell.html", stocks=stocks)
 
+
 @app.route("/funds", methods=["GET", "POST"])
 @login_required
 def funds():
-
     """Add more cash on balance"""
 
     if request.method == "POST":
@@ -303,16 +299,16 @@ def funds():
         if not funds or not funds.isdigit() or int(funds) <= 0:
             return apology("Must provide a positive number")
 
-
         funds = int(funds)
-        db.execute("UPDATE users SET cash = cash + :funds WHERE id = :user_id", funds=funds, user_id=session["user_id"])
+        db.execute("UPDATE users SET cash = cash + :funds WHERE id = :user_id",
+                   funds=funds, user_id=session["user_id"])
         return redirect("/")
 
-
     else:
-        cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
+        cash = db.execute("SELECT cash FROM users WHERE id = :user_id",
+                          user_id=session["user_id"])[0]["cash"]
         cash = usd(cash)
-        return render_template("funds.html",cash=cash)
+        return render_template("funds.html", cash=cash)
 
 
 @app.route("/user", methods=["GET", "POST"])
@@ -333,15 +329,12 @@ def user():
         elif not request.form.get("new_register_password") == request.form.get("new_confirm_password"):
             return apology("passwrords are diferent", 400)
 
-               # Check if register_password == confirm_password
+            # Check if register_password == confirm_password
         elif request.form.get("new_register_password") == request.form.get("new_confirm_password"):
             new_password_hash = generate_password_hash(request.form.get("new_register_password"))
-            #update password
-            db.execute("UPDATE users SET hash = :new_password_hash WHERE id = :user_id", new_password_hash=new_password_hash, user_id=session["user_id"])
+            # update password
+            db.execute("UPDATE users SET hash = :new_password_hash WHERE id = :user_id",
+                       new_password_hash=new_password_hash, user_id=session["user_id"])
             return redirect("/login")
     else:
         return render_template("user.html")
-
-
-
-
