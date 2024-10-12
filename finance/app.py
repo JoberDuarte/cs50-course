@@ -213,23 +213,24 @@ def register():
             return apology("must confirm password", 403)
 
        # Check if register_password == confirm_password
-        elif not request.form.get("password") == request.form.get("confirmation"):
+        elif request.form.get("password") != request.form.get("confirmation"):
             return apology("passwords are diferent", 400)
 
             # Check if register_password == confirm_password
-        elif request.form.get("password") == request.form.get("confirmation"):
+        #elif request.form.get("password") == request.form.get("confirmation"):
+
+
+        try:
             password_hash = generate_password_hash(request.form.get("password"))
             username = request.form.get("username")
             balance = 10000.00
+            values = (username, password_hash, balance)
+            db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?, ?)", *values)
+            return redirect("login.html")
 
-            try:
-                values = (username, password_hash, balance)
-                db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?, ?)", *values)
-                return redirect("login.html")
-
-            except Exception as e:
-                print(e)
-                return apology("An error occurred")
+        except Exception as e:
+            print(e)
+            return apology("An error occurred")
 
     else:
         return render_template("register.html")
