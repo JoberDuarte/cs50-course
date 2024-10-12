@@ -214,10 +214,10 @@ def register():
 
        # Check if register_password == confirm_password
         elif not request.form.get("password") == request.form.get("confirmation"):
-            return apology("passwrords are diferent", 400)
+            return apology("passwords are diferent", 400)
 
             # Check if register_password == confirm_password
-        elif request.form.get("password") == request.form.get("confimation"):
+        elif request.form.get("password") == request.form.get("confirmation"):
             password_hash = generate_password_hash(request.form.get("password"))
             username = request.form.get("username")
             balance = 10000.00
