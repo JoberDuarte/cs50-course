@@ -316,6 +316,7 @@ def funds():
 
 
 @app.route("/user", methods=["GET", "POST"])
+@login_required
 def user():
     """Change Password"""
     if request.method == "POST":
