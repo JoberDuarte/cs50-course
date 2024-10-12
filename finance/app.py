@@ -225,7 +225,7 @@ def register():
             try:
                 values = (username, password_hash, balance)
                 db.execute("INSERT INTO users (username, hash, cash) VALUES (?, ?, ?)", *values)
-                return render_template("login.html")
+                return redirect("login.html")
 
             except Exception as e:
                 print(e)
