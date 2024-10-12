@@ -201,7 +201,7 @@ def register():
     if request.method == "POST":
 
         # Ensure username was submitted
-        if not request.form.get("register_username"):
+        if not request.form.get("username"):
             return apology("must provide username", 403)
 
         # Ensure password was submitted
@@ -219,7 +219,7 @@ def register():
             # Check if register_password == confirm_password
         elif request.form.get("register_password") == request.form.get("confirm_password"):
             password_hash = generate_password_hash(request.form.get("register_password"))
-            username = request.form.get("register_username")
+            username = request.form.get("username")
             balance = 10000.00
 
             try:
