@@ -202,15 +202,15 @@ def register():
 
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         # Ensure confirm_password was submitted
         elif not request.form.get("confirmation"):
-            return apology("must confirm password", 403)
+            return apology("must confirm password", 400)
 
        # Check if register_password == confirm_password
         elif request.form.get("password") != request.form.get("confirmation"):
