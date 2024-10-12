@@ -315,4 +315,32 @@ def funds():
         return render_template("funds.html",cash=cash)
 
 
+@app.route("/user", methods=["GET", "POST"])
+def user():
+    """Change Password"""
+    if request.method == "POST":
+
+        # Ensure new password was submitted
+        if not request.form.get("new_register_password"):
+            return apology("must provide a new password", 403)
+
+        # Ensure new confirm_password was submitted
+        elif not request.form.get("new_confirm_password"):
+            return apology("must confirm password", 403)
+
+       # Check if register_password == confirm_password
+        elif not request.form.get("new_register_password") == request.form.get("new_confirm_password"):
+            return apology("passwrords are diferent", 400)
+
+               # Check if register_password == confirm_password
+        elif request.form.get("new_register_password") == request.form.get("new_confirm_password"):
+            new_password_hash = generate_password_hash(request.form.get("new_register_password"))
+            #update password
+            db.execute("UPDATE users SET hash = :new_password_hash WHERE id = :user_id", new_password_hash=new_password_hash, user_id=session["user_id"])
+            return redirect("login.html")
+    else:
+        render_template("user.html")
+
+
+
 
