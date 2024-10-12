@@ -205,20 +205,20 @@ def register():
             return apology("must provide username", 403)
 
         # Ensure password was submitted
-        elif not request.form.get("register_password"):
+        elif not request.form.get("password"):
             return apology("must provide password", 403)
 
         # Ensure confirm_password was submitted
-        elif not request.form.get("confirm_password"):
+        elif not request.form.get("confirmation"):
             return apology("must confirm password", 403)
 
        # Check if register_password == confirm_password
-        elif not request.form.get("register_password") == request.form.get("confirm_password"):
+        elif not request.form.get("password") == request.form.get("confirmation"):
             return apology("passwrords are diferent", 400)
 
             # Check if register_password == confirm_password
-        elif request.form.get("register_password") == request.form.get("confirm_password"):
-            password_hash = generate_password_hash(request.form.get("register_password"))
+        elif request.form.get("password") == request.form.get("confimation"):
+            password_hash = generate_password_hash(request.form.get("password"))
             username = request.form.get("username")
             balance = 10000.00
 
