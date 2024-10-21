@@ -1,2 +1,0 @@
-SELECT name
-From songs;

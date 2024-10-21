@@ -1,53 +1,84 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct node
 {
-    int number;
+    string phrase;
     struct node *next;
 }
 node;
 
-int main(int argc, char *argv[])
+#define LIST_SIZE 2
+
+bool unload(node *list);
+void visualizer(node *list);
+
+int main(void)
 {
-    // Memory for numbers
     node *list = NULL;
 
-    // For each command-line argument
-    for (int i = 1; i < argc; i++)
+    // Add items to list
+    for (int i = 0; i < LIST_SIZE; i++)
     {
-        // Convert argument to int
-        int number = atoi(argv[i]);
+        string phrase = get_string("Enter a new phrase: ");
 
-        // Allocate node for number
+        // TODO: add phrase to new node in list
         node *n = malloc(sizeof(node));
-        if (n == NULL)
+
+        if(n == NULL)
         {
             return 1;
         }
-        n->number = number;
-        n->next = NULL;
 
-        // Prepend node to list
-        n->next = list;
+        n ->phrase = phrase;
+        n ->next = NULL;
+
+        n ->next = list;
         list = n;
+
+
+
+
+        // Visualize list after adding a node.
+        visualizer(list);
     }
 
-    // Print numbers
+    // Free all memory used
+    if (!unload(list))
+    {
+        printf("Error freeing the list.\n");
+        return 1;
+    }
+
+    printf("Freed the list.\n");
+    return 0;
+}
+
+bool unload(node *list)
+{
+    // TODO: Free all allocated nodes
     node *ptr = list;
-    while (ptr != NULL)
+
+    while(ptr != NULL)
     {
-        printf("%i\n", ptr->number);
-        ptr = ptr->next;
+        ptr = list->next;
+        free(list);
+        list = ptr;
     }
 
-    // Free memory
-    ptr = list;
-    while (ptr != NULL)
+
+    return true;
+}
+
+void visualizer(node *list)
+{
+    printf("\n+-- List Visualizer --+\n\n");
+    while (list != NULL)
     {
-        node *next = ptr->next;
-        free(ptr);
-        ptr = next;
+        printf("Location %p\nPhrase: \"%s\"\nNext: %p\n\n", list, list->phrase, list->next);
+        list = list->next;
     }
+    printf("+---------------------+\n\n");
 }

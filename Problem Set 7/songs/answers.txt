@@ -1,0 +1,10 @@
+1 - I think the average values of danceability, energy,and valence are calculated, and if the final average value is above 0.5,
+it characterizes a happy, joyful, vibrant aura. If it is below 0.5, it would be the opposit more sad, reserved, and introspective.
+
+
+
+2 - This method may not be efficient because the top 100 might include songs that were played only once by the user,
+giving them the same importance as a song that was played thousands of times, for example.
+
+A more efficient way to calculate this 'aura' would be to assign different significance based on the number of plays a song received.
+For instance, a song that was played 100 times would have 10 times the significance of a song that was played 10 times.

@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: This was the program that took the longest time to sort a completely reversed list That is the worst case for bubble sort O(n²)
+
+sort2 uses: Merge Sort
+
+How do you know?: This was the fastest program to sort the lists in the 3 cases (this became more evident in the larger lists like 50000)
+
+sort3 uses: Selection Sort
+
+How do you know?: This program took the same execution time no matter how the list was sorted, O(n²) and Ω(n²) And it was less efficient in the sorted list than sort1

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Cash
+{% endblock %}
+
+{% block main %}
+    <h1>Add Funds</h1>
+    <form action="/funds" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="funds" name="funds" placeholder="Add Funds" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit" value="Add">Add</button>
+    </form>
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <table style="width: 30%; text-align: center; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th style="text-align: center;">CASH</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">{{ cash }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

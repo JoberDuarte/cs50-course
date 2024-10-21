@@ -1,0 +1,35 @@
+TAGS HTML
+
+<div>
+<img>
+<h1>
+<h2>
+<p>
+<ul>
+<li>
+<strong>
+<h3>
+<footer>
+<h6>
+<em>
+
+CSS properties
+display
+justify-content
+gap
+margin-top
+background-color
+color
+padding
+text-align
+font-family
+font-weight
+max-widht
+margin
+border-radius
+box-shadow
+width
+cursor
+
+
+I chose JavaScript to create button functionalities and redirects to other pages, and I used JavaScript for button functions and page redirects.
